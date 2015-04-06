@@ -1,0 +1,44 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.61)
+AC_INIT(FULL-PACKAGE-NAME, VERSION, BUG-REPORT-ADDRESS)
+AC_CONFIG_SRCDIR([common/asm-wstr.h])
+AC_CONFIG_HEADER([config.h])
+AM_INIT_AUTOMAKE(active-sync-mobile, 0.1)
+
+# Checks for programs.
+AC_PROG_AWK
+AC_PROG_CC
+AM_PROG_CC_C_O
+AC_PROG_LIBTOOL
+
+# Checks for libraries.
+PKG_CHECK_MODULES(GLIB, ["glib-2.0 gobject-2.0"])
+AC_SUBST(GLIB_CFLAGS)
+AC_SUBST(GLIB_LIBS)
+
+# Checks for header files.
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_C_INLINE
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+
+AC_CONFIG_FILES([src/Makefile
+	common/Makefile
+	rapi/Makefile
+	rapi/common/Makefile
+	rapi/device/Makefile
+	rapi/host/Makefile
+	rrac/Makefile
+	rrac/common/Makefile
+	rrac/device/Makefile
+	rrac/host/Makefile
+	asm-device.pc
+	asm-host.pc
+	Makefile
+	])
+AC_OUTPUT

@@ -1,0 +1,19 @@
+0x16:Fileman:Create_File:WStr* file_name, unsigned int access_flags, unsigned int share_mode, unsigned int creation_disposition, unsigned int flags_and_attributes, unsigned int template_file:
+0x17:Fileman:Read_File:unsigned int handle, unsigned int length,:unsigned int* ret_data_length, void** ret_data
+0x18:Fileman:Write_File:unsigned int handle, unsigned int data_length, void* data,: unsigned int* bytes_written
+0x26:Fileman:Seek:unsigned int handle, unsigned int low, unsigned int has_high, unsigned int high, unsigned int mode,:unsigned int* ret_high
+0x27:Fileman:Seek_To_End:unsigned int handle:
+0x41:Fileman:Get_File_Time:unsigned int handle,:RapiFileTime** create_time, RapiFileTime** last_access_time, RapiFileTime** last_write_time
+0x42:Fileman:Set_File_Time:unsigned int handle, RapiFileTime* create_time, RapiFileTime* last_access_time, RapiFileTime* last_write_time:
+0x2c:Fileman:Copy_File:WStr* from, WStr* to, unsigned int overwrite:
+0x28:Fileman:Create_Directory:WStr* path:
+0x2d:Fileman:Delete_File:WStr* file:
+0x29:Fileman:Remove_Directory:WStr* path:
+0x2b:Fileman:Move_File:WStr* from, WStr* to:
+0x4b:Fileman:Get_Special_Folder:unsigned int folder, unsigned int buffer_length,:WStr** ret_folder
+0x19:Fileman:Close_Handle:unsigned int handle:
+0x2e:Fileman:Get_Size:unsigned int handle:
+0x1a:Fileman:Find_All_Files:WStr* path, unsigned int flags,:unsigned int* count, RapiFindData** find_data
+0x11:Fileman:Find_First_File:WStr* path,:RapiFindData** find_data, unsigned int* handle
+0x00:Fileman:Find_Next_File:unsigned int handle,:RapiFindData** find_data
+0x01:Fileman:Find_Close:unsigned int handle:

@@ -1,0 +1,15 @@
+<driver>
+<name>demo</name>
+<author>Li XianJing</author>
+<email>xianjimli@hotmail.com</email>
+<description>it is a demo</description>
+<license>GPL</license>
+<parameters>
+<parameter>
+<name>count</name>
+<variable>count</variable>
+<type>int</type>
+<permission>0660</permission>
+</parameter>
+</parameters>
+</driver>

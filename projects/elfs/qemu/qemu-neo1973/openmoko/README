@@ -1,0 +1,15 @@
+This directory contains files used for OpenMoko which are not qemu
+code but are in some way related or useful to have at hand.
+
+The kernel patch with GTA02fake support is based on:
+ * "andy" branch of the OpenMoko kernel git at around 2.6.26-rc1.
+
+The following sequence can be used to obtain a working tree on which the
+patch can be applied:
+
+cg-clone git://git.openmoko.org/git/kernel.git#andy
+cd kernel
+cg-switch -r fbfbc5130075e233f2fd2613e2897c3c4ed4bc7f gta02fake
+cg-patch -c -e "GTA02-psuedo support." < ../linux-gta02-pseudo.patch
+
+mkfs.jffs2  -d rootfs -o rootfs.jffs2 --eraseblock=0x4000 --pad=0x2800000

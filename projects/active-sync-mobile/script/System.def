@@ -1,0 +1,8 @@
+0x39:System:Get_Store_info::RapiStoreInfo** store_info
+0x3d:System:Get_System_Info:RapiSystemInfo* system_info,:RapiSystemInfo** system_info_ret
+0x49:System:Get_Power_Status:unsigned int refresh,:RapiSystemPowerStatus** power_status
+0x43:System:Get_Version_Info::RapiVersionInfo** version_info
+0x02:System:Start_Replication::
+0x59:System:Start_Sync:WStr* params:
+0x10:System:Resume_Sync::
+0x0f:System:Pause_Sync::

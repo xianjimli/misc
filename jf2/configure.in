@@ -1,0 +1,43 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.61)
+AC_INIT(FULL-PACKAGE-NAME, VERSION, BUG-REPORT-ADDRESS)
+AC_CONFIG_SRCDIR([common/jtype.h])
+AC_CONFIG_HEADER([config.h])
+AM_INIT_AUTOMAKE(jf2, 0.1)
+
+# Checks for programs.
+AC_PROG_CC
+AM_PROG_CC_C_O
+AC_PROG_LIBTOOL
+
+# Checks for libraries.
+
+# Checks for header files.
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_C_INLINE
+AC_TYPE_SIZE_T
+
+# Checks for library functions.
+
+AC_CONFIG_FILES([Makefile
+                 common/Makefile
+                 vm/Makefile
+                 vm/devices/Makefile
+                 vm/arm7/Makefile
+				os/Makefile
+				os/app/Makefile
+				os/app/shell/Makefile
+				os/common/Makefile
+				os/kernel/arch/Makefile
+				os/kernel/arch/arm7/Makefile
+				os/kernel/Makefile
+				os/libc/arch/Makefile
+				os/libc/arch/arm7/Makefile
+				os/libc/Makefile
+
+                 ])
+AC_OUTPUT

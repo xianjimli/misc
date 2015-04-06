@@ -1,0 +1,23 @@
+2008-9-26 Li XianJing <lixianjing@broncho.cn>
+	* add multi thread test.
+	* Release 0.7
+
+2008-4-23 Li XianJing <lixianjing@broncho.cn>
+	* add org.broncho.EventManagerInterface.service.in
+
+2008-4-17 Li XianJing <lixianjing@broncho.cn>
+	* fixed a bug in eventmanager_type.h
+	* Release 0.5
+
+2007-7-9 Li XianJing <lixianjing@broncho.cn>
+	* Rename service xml file name
+	* install service xml file name.
+	* Release 0.4
+
+2007-6-18 Li XianJing <lixianjing@broncho.cn>
+	* add STR_SYSTEM_EVENT_TYPE_HEADSET_PLUG_IN/STR_SYSTEM_EVENT_TYPE_HEADSET_REMOVE
+	* Release 0.3
+
+2007-5-29 Li XianJing <lixianjing@broncho.cn>
+	* use system bus. 
+	* Release 0.2

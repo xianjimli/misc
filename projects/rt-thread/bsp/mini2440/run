@@ -1,0 +1,1 @@
+qemu-system-arm -S -s -M mini2440 -kernel rtthread.bin -serial stdio

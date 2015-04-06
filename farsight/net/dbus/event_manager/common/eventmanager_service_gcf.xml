@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<package name="/">
+  <interface name="EventManager.Service">
+
+    <signal name="event" return_type="void">
+         <arg type="char*" name="type"/>
+         <arg type="int"   name="status"/>
+         <arg type="char*" name="detail"/>
+    </signal>
+
+    <method name="trigger_event" return_type="gboolean" >
+         <arg type="char*" name="type"/>
+         <arg type="int"   name="status"/>
+         <arg type="char*" name="detail"/>
+    </method>
+
+    <method name="query_event" return_type="gboolean" >
+         <arg type="char*" name="type"/>
+         <arg type="int*"   name="status"/>
+         <arg type="char**" name="detail"/>
+    </method>
+
+  </interface>
+</package>
+

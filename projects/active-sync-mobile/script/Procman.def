@@ -1,0 +1,2 @@
+0x2a:Procman:Create_Process:WStr* app_name, WStr* cmd_line, unsigned int zero1, unsigned int zero2, unsigned int zero3, unsigned int flags,unsigned int zero4, unsigned int zero5, unsigned int zero6,:RapiProcessInfo** process_info
+0x0e:Procman:Config_Process:WStr* config, unsigned int flags,:unsigned int* ret_data_length, void** ret_data

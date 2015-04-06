@@ -1,0 +1,4 @@
+:%s/read_line/read/g
+:%s/ReadLine/Read/g
+:%s/\<line\>/buff/g
+:wq

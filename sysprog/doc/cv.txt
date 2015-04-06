@@ -1,0 +1,91 @@
+
+Basic information
+----------------------------------------
+Name         : XianJim Lee
+Gender       : Male
+Age          : 31
+Education    : B.E. in Mechanical Electronic Engineering with a minor in Computer Science: Wuhan University of Technology
+Home Page    : http://www.limodev.cn | http://blog.csdn.net/absurd
+Mobile Phone : +8613928462789
+Email        : xianjimli@hotmail.com
+MSN          : xianjimli@hotmail.com
+
+Skills
+----------------------------------------
+1. 10 years experience in Linux development, 5 years experience in mobile phone development, 5 years experience in team leader.
+
+2. A solid basic knowledge of operating system, compiler theory, data structure and algorithm, networks, design patterns, code refactor, DBMS implementation and other basic principles of computer knowledge.
+
+3. Familiar with object-oriented programming and design patterns, especially good at Linux mobile platform development.
+From the end of 2005, I was responsible for broncho mobile platform architecture design, and write the framework code of major modules.
+
+4. Familiar with the basic environment of Linux mobile phone and related open source software packages, I have written a large number of technical articles about the implementation or usage of those packages. those articles have been reproduced by major technical web sites in China. I was named as open source expert by the Chinese Soft Development Network (CSDN).
+
+5. Good at team-building, set up learning-oriented team. From 2005, I started to form the broncho team, trained every member from the junior engineer to expert in the field of mobile Linux. with less than 10 developers, our team completed the Linux-based mobile platform(based on GTK+/DirectFB). Now, the broncho team are kind of well-known in China.
+
+6. Good at technical writing. Almost all tech web sites in China reproduced my tech articles. My blog was nominated as the most valuable blog by Chinese software development network (CSDN) in last three years. I have published several articles on the programmers magazine. Now, I am writing a book named "system programmers training program".
+
+7. I wields a lot of influence in Linux mobile development community in China and have good relationship with developers. 
+
+Experience 
+----------------------------------------
+Topwise inc. (ShenZhen) 2005.7 - Now Linux mobile phone group tech leader 
+
+HTW inc. (ShenZhen) 2004.4 - 2005.7 Feature phone architecture
+
+Adaptview inc. (BeiJing) 2001.2 - 2004.2 Software engineer
+
+Reference
+----------------------------------------
+My blog at CSDN:               http://blog.csdn.net/absurd
+The broncho project:           http://www.broncho.cn
+The linux mobile development:  http://www.limodev.cn
+
+Appendix
+----------------------------------------
+I plan to found a open source project to develop a web based mobile phone/device platform, the UI of applications are developed in HTML/XUL/CSS/javascript, the logic implementation are provided by services(local or remote). the software stack like this:
+
+-----------------------------------------------------------------------------------------------
+        ||  MMI        APPS(Phone SMS MMS STK)       | PIM     APPS(Contacts Scdule Alarm ...) 
+APPS    ||  Multimedia APPS(player recorder camera)  | Tools   APPS(calculator notepad ...)
+        ||  Office     APPS(word excel presentation) | Network APPS(IM email downloader games)
+-----------------------------------------------------------------------------------------------
+Browser ||              Mozilla or webkit | GUI(prefer DirectFB)
+-----------------------------------------------------------------------------------------------
+Services|| Alarm | MMI | Media | Network  | Database | Bluetooth | PowerManager | Remote ...
+-----------------------------------------------------------------------------------------------
+libs    ||              libc libxml png jpeg ...
+-----------------------------------------------------------------------------------------------
+kernel  ||               Linux kernel or other os
+-----------------------------------------------------------------------------------------------
+
+Advantages:
+
+1 Reuse existing open source packages.
+2 Applications are developed in markup + script languages.
+3 Applications can be hosted on remote server.
+4 Total open source solution for mobile devices.
+5 Applicable to many embedded environment.
+6 More light-weight than android, gpe and openmoko.
+
+Tasks:
+
+1 Window manager based on browser.
+2 Desktop environment based on browser.
+3 MMI service.
+4 Common applications.
+5 Adapt/port dependent packages.
+6   ...
+
+Costs:
+
+150,000US$/year: salary for full-time developers(3 senior engineers + 3 junior engineers) + other spending
+finish the infrastructure in 2-3 years, so total cost is about 300,000 to 500,000 US$
+
+How to make it:
+
+o Utilize community resource.
+o Form an effective development team.
+
+
+

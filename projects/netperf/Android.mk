@@ -1,0 +1,11 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := netperf 
+LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+LOCAL_MODULE_TAGS := eng
+LOCAL_CFLAGS := $(L_CFLAGS) -DLINUX -DHAS_THREAD
+LOCAL_SRC_FILES := httpclient.c mysocket.c
+include $(BUILD_EXECUTABLE)
+
+

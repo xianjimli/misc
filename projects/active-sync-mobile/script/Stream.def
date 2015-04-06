@@ -1,0 +1,7 @@
+4:Stream:Read:void* buffer, unsigned int length,:unsigned int* real_length
+5:Stream:Write:void* buffer, unsigned int length,:unsigned int* real_length
+1:Stream:Flush::
+2:Stream:Get_Fd::
+3:Stream:Set_Time_Out:unsigned int rto_seconds, unsigned int wto_seconds:
+6:Stream:Hook_Write_Progress:HookProgressFunc on_progress, void* on_progress_ctx:
+7:Stream:Hook_Read_Progress:HookProgressFunc on_progress, void* on_progress_ctx:

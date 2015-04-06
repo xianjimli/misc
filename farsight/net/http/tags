@@ -1,0 +1,96 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+Append	http_headers.cpp	/^bool CHttpHeaders::Append(const string& key, const string& value)$/;"	f	class:CHttpHeaders
+CFLAGS	Makefile	/^CFLAGS=-Wall -g$/;"	m
+CHttpClient	http_client.h	/^class CHttpClient$/;"	c
+CHttpHeaders	http_headers.cpp	/^CHttpHeaders::CHttpHeaders(void)$/;"	f	class:CHttpHeaders
+CHttpHeaders	http_headers.h	/^class CHttpHeaders$/;"	c
+CHttpRequest	http_request.cpp	/^CHttpRequest::CHttpRequest(void)$/;"	f	class:CHttpRequest
+CHttpRequest	http_request.h	/^class CHttpRequest$/;"	c
+CHttpResponse	http_response.cpp	/^CHttpResponse::CHttpResponse(void)$/;"	f	class:CHttpResponse
+CHttpResponse	http_response.h	/^class CHttpResponse$/;"	c
+CHttpSocketStream	http_socket_stream.cpp	/^CHttpSocketStream::CHttpSocketStream(int socket)$/;"	f	class:CHttpSocketStream
+CHttpSocketStream	http_socket_stream.h	/^class CHttpSocketStream : public CHttpStream$/;"	c
+CHttpStream	http_stream.h	/^	CHttpStream(void) {};$/;"	f	class:CHttpStream
+CHttpStream	http_stream.h	/^class CHttpStream$/;"	c
+CHttpStreamFactory	http_stream_factory.cpp	/^CHttpStreamFactory::CHttpStreamFactory(void)$/;"	f	class:CHttpStreamFactory
+CHttpStreamFactory	http_stream_factory.h	/^class CHttpStreamFactory$/;"	c
+CHttpUrl	http_url.cpp	/^CHttpUrl::CHttpUrl(const string& url)$/;"	f	class:CHttpUrl
+CHttpUrl	http_url.cpp	/^CHttpUrl::CHttpUrl(void)$/;"	f	class:CHttpUrl
+CHttpUrl	http_url.h	/^class CHttpUrl$/;"	c
+CreateStream	http_stream_factory.cpp	/^CHttpStream* CHttpStreamFactory::CreateStream(const string& protocol, const string& host, int port)$/;"	f	class:CHttpStreamFactory
+Get	http_client.cpp	/^CHttpResponse* CHttpClient::Get(CHttpRequest& request)$/;"	f	class:CHttpClient
+Get	http_headers.cpp	/^bool CHttpHeaders::Get(const string& key, string& value) const$/;"	f	class:CHttpHeaders
+GetBodyData	http_response.cpp	/^void*  CHttpResponse::GetBodyData(void) const$/;"	f	class:CHttpResponse
+GetBodyLength	http_response.cpp	/^size_t CHttpResponse::GetBodyLength(void) const$/;"	f	class:CHttpResponse
+GetCode	http_response.cpp	/^int    CHttpResponse::GetCode(void)$/;"	f	class:CHttpResponse
+GetHeader	http_request.cpp	/^bool CHttpRequest::GetHeader(const string& key, string& value) const$/;"	f	class:CHttpRequest
+GetHeader	http_response.cpp	/^bool   CHttpResponse::GetHeader(const string& key, string& value)$/;"	f	class:CHttpResponse
+GetHost	http_request.cpp	/^bool CHttpRequest::GetHost(string& host) const$/;"	f	class:CHttpRequest
+GetHost	http_url.cpp	/^bool CHttpUrl::GetHost(string& host) const$/;"	f	class:CHttpUrl
+GetPath	http_url.cpp	/^bool CHttpUrl::GetPath(string& path) const$/;"	f	class:CHttpUrl
+GetPort	http_request.cpp	/^bool CHttpRequest::GetPort(int& port) const$/;"	f	class:CHttpRequest
+GetPort	http_url.cpp	/^bool CHttpUrl::GetPort(int& port) const$/;"	f	class:CHttpUrl
+GetProtocol	http_request.cpp	/^bool CHttpRequest::GetProtocol(string& protocol) const$/;"	f	class:CHttpRequest
+GetProtocol	http_url.cpp	/^bool CHttpUrl::GetProtocol(string& protocol) const$/;"	f	class:CHttpUrl
+HTTP_CLIENT_H	http_client.h	33;"	d
+HTTP_HEADERS_H	http_headers.h	33;"	d
+HTTP_REQUEST_H	http_request.h	33;"	d
+HTTP_RESPONSE_H	http_response.h	33;"	d
+HTTP_SOCK_STREAM_H	http_socket_stream.h	33;"	d
+HTTP_STREAM_FACTORY_H	http_stream_factory.h	33;"	d
+HTTP_STREAM_H	http_stream.h	33;"	d
+HTTP_TYPE_H	http_type.h	33;"	d
+HTTP_URL_H	http_url.h	33;"	d
+HTTP_UTIL_H	http_util.h	32;"	d
+HttpHeader	http_headers.h	/^		HttpHeader(const string& k, const string& v)$/;"	f	struct:CHttpHeaders::HttpHeader
+HttpHeader	http_headers.h	/^	struct HttpHeader $/;"	s	class:CHttpHeaders
+LDFLAGS	Makefile	/^LDFLAGS=-lstdc++$/;"	m
+Pack	http_headers.cpp	/^bool CHttpHeaders::Pack(string& str) const$/;"	f	class:CHttpHeaders
+Pack	http_request.cpp	/^bool CHttpRequest::Pack(string& str) const$/;"	f	class:CHttpRequest
+Parse	http_headers.cpp	/^bool CHttpHeaders::Parse(const string& str)$/;"	f	class:CHttpHeaders
+Parse	http_response.cpp	/^bool   CHttpResponse::Parse(char* data, size_t length)$/;"	f	class:CHttpResponse
+Parse	http_url.cpp	/^bool CHttpUrl::Parse(const string& url)$/;"	f	class:CHttpUrl
+Post	http_client.cpp	/^CHttpResponse* CHttpClient::Post(CHttpRequest& request, void* data, size_t length)$/;"	f	class:CHttpClient
+Read	http_socket_stream.cpp	/^int CHttpSocketStream::Read(char* buffer, size_t length)$/;"	f	class:CHttpSocketStream
+Request	http_client.cpp	/^CHttpResponse* CHttpClient::Request(CHttpRequest& request, const string& method, void* data, size_t data_length)$/;"	f	class:CHttpClient
+Set	http_headers.cpp	/^bool CHttpHeaders::Set(const string& key, const string& value)$/;"	f	class:CHttpHeaders
+SetBody	http_response.cpp	/^bool   CHttpResponse::SetBody(void* data, size_t length)$/;"	f	class:CHttpResponse
+SetHeader	http_request.cpp	/^bool CHttpRequest::SetHeader(const string& key, const string& value)$/;"	f	class:CHttpRequest
+SetUrl	http_request.cpp	/^bool CHttpRequest::SetUrl(const string& str)$/;"	f	class:CHttpRequest
+Write	http_socket_stream.cpp	/^int CHttpSocketStream::Write(const char* buffer, size_t length)$/;"	f	class:CHttpSocketStream
+key	http_headers.h	/^		string key;$/;"	m	struct:CHttpHeaders::HttpHeader
+m_body_data	http_response.h	/^	void*        m_body_data;$/;"	m	class:CHttpResponse
+m_body_length	http_response.h	/^	size_t       m_body_length;$/;"	m	class:CHttpResponse
+m_headers	http_headers.h	/^	vector<HttpHeader> m_headers;$/;"	m	class:CHttpHeaders
+m_headers	http_request.h	/^	CHttpHeaders m_headers;$/;"	m	class:CHttpRequest
+m_headers	http_response.h	/^	CHttpHeaders m_headers;$/;"	m	class:CHttpResponse
+m_host	http_url.h	/^	string m_host;$/;"	m	class:CHttpUrl
+m_path	http_url.h	/^	string m_path;$/;"	m	class:CHttpUrl
+m_port	http_url.h	/^	int    m_port;$/;"	m	class:CHttpUrl
+m_protocol	http_url.h	/^	string m_protocol;$/;"	m	class:CHttpUrl
+m_resp_code	http_response.h	/^	int          m_resp_code;$/;"	m	class:CHttpResponse
+m_socket	http_socket_stream.h	/^	int m_socket;$/;"	m	class:CHttpSocketStream
+m_url	http_request.h	/^	CHttpUrl m_url;$/;"	m	class:CHttpRequest
+m_url	http_url.h	/^	string m_url;$/;"	m	class:CHttpUrl
+main	http_client.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	http_headers.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	http_request.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	http_response.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	http_stream_factory.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	http_url.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	http_util.cpp	/^int main(int argc, char* argv[])$/;"	f
+socket_connect	http_stream_factory.cpp	/^static int socket_connect(const char* host, int port)$/;"	f	file:
+strtrim	http_util.cpp	/^const char* strtrim(char* str)$/;"	f
+value	http_headers.h	/^		string value;$/;"	m	struct:CHttpHeaders::HttpHeader
+~CHttpHeaders	http_headers.cpp	/^CHttpHeaders::~CHttpHeaders(void)$/;"	f	class:CHttpHeaders
+~CHttpRequest	http_request.cpp	/^CHttpRequest::~CHttpRequest(void)$/;"	f	class:CHttpRequest
+~CHttpResponse	http_response.cpp	/^CHttpResponse::~CHttpResponse(void)$/;"	f	class:CHttpResponse
+~CHttpSocketStream	http_socket_stream.cpp	/^CHttpSocketStream::~CHttpSocketStream(void)$/;"	f	class:CHttpSocketStream
+~CHttpStream	http_stream.h	/^	virtual ~CHttpStream(void) {};$/;"	f	class:CHttpStream
+~CHttpStreamFactory	http_stream_factory.cpp	/^CHttpStreamFactory::~CHttpStreamFactory(void)$/;"	f	class:CHttpStreamFactory
+~CHttpUrl	http_url.cpp	/^CHttpUrl::~CHttpUrl(void)$/;"	f	class:CHttpUrl

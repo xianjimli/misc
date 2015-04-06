@@ -1,0 +1,2 @@
+-filter clip(0, 0, 100, 100) -filter zoom(500) -filter text(w,h,c,date) -filter rotae(270) -filter save(filename)
+

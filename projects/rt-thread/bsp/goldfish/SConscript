@@ -1,0 +1,13 @@
+import rtconfig
+Import('RTT_ROOT')
+from building import *
+
+src_bsp = ['application.c', 'startup.c', 'board.c', 'raise.c']
+
+
+#src	= File(src_bsp + src_drv)
+src	= File(src_bsp)
+CPPPATH = [RTT_ROOT + '/bsp/goldfish']
+group = DefineGroup('Startup', src, depend = [''], CPPPATH = CPPPATH)
+
+Return('group')

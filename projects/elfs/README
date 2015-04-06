@@ -1,0 +1,9 @@
+elfs - embedded linux from scratch
+---------------------------------------
+o create xxxx_env.sh for your platform. 
+o add packages config in pkg-xxxx.ini
+o . xxxx_env.sh to export envs.
+o to build all the packages: make -f Makefile.xxxx all
+
+Bugs report to Li XianJing <xianjimli@hotmail.com>
+

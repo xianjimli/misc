@@ -1,0 +1,87 @@
+C、C＋＋和数据结构试题
+==========================================================================
+
+一、分析sizeof的结果(32位程序)                       5分
+
+int a[10] = {0};
+sizeof(int)    =
+sizeof(char*)  =
+sizeof(char**) =
+sizeof(a)      =
+sizeof(a[0])   = 
+
+二、请举出static关键字在C语言中的三种用途。           15分
+
+三、写一个宏MIN，这个宏输入两个参数并返回较小的一个。 10分
+
+四、名词解释（任选5个）                               20分
+1.面向对象
+2.类
+3.对象
+4.哈希表
+5.回调函数
+6.OOA/OOD/OOP/OOT
+7.单元测试
+8.构造函数
+
+五、请解释下列程序存在的问题(任选两个)                20分
+程序一：
+char* get_str(void)
+{
+    char str[] = {"abcd"};
+
+    return str;
+}
+
+int main(int argc, char* argv[])
+{
+    char* p = get_str();
+
+    printf("%s\n", p);
+
+    return 0;
+}
+
+程序二：
+int main(int argc, char* argv[])
+{
+    char* p = "abcd";
+
+    *p = '1';
+
+    return 0;
+}
+
+程序三:
+#include <stdlib.h>
+#include <stdio.h>
+
+void get_str(char* p)
+{
+    p = malloc(sizeof("abcd"));
+    strcpy(p, "abcd");
+
+    return;
+}
+
+int main(int argc, char* argv[])
+{
+    char* p = NULL;
+
+    get_str(p);
+    printf("p=%p\n", p);
+
+    return 0;
+}
+
+六、请用冒泡排序或快速排序分析下列数据的排序过程   10分
+原始数据：123 100 400 500 70 40 90 
+
+七、用C语言编写一个二分查找算法。                  10分
+
+八、用C＋＋声明队列类（不用写出实现）。            10分
+
+
+
+
+

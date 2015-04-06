@@ -1,0 +1,2 @@
+SUBDIRS=common device host
+

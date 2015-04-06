@@ -1,0 +1,253 @@
+cpu/arm920t/start.S
+lib_arm/board.c:start_armboot
+
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-1.3.4.tar.bz2
+tar xf u-boot-1.3.4.tar.bz2
+
+make smdk2410_config
+make ARCH=arm CROSS_COMPILE=/home/work/kernel/3.3.2/bin/arm-linux-
+
+arm-linux-objdump -S u-boot >u-boot.s
+
+_start: b       start_code
+
+1.设置CPSR的状态：关中断，SVC32模式 
+0xd3=110 10011 (I F T M4 M3 M2 M1 M0)
+
+汇编代码：
+33f80050:   e10f0000    mrs r0, CPSR
+33f80054:   e3c0001f    bic r0, r0, #31 ; 0x1f
+33f80058:   e38000d3    orr r0, r0, #211    ; 0xd3
+33f8005c:   e129f000    msr CPSR_fc, r0
+
+2.LED初始化
+汇编代码：
+eb0001c8    bl  33f80788 <__coloured_LED_init> __coloured_LED_init是空函数
+33f80064:   eb0001c8    bl  33f8078c <__red_LED_on> __red_LED_on是空函数
+
+3.关闭WatchDog
+WTCON 0x53000000 R/W Watchdog timer control register
+
+汇编代码：
+33f80068:   e3a00453    mov r0, #1392508928 ; 0x53000000
+33f8006c:   e3a01000    mov r1, #0  ; 0x0
+33f80070:   e5801000    str r1, [r0]
+
+4.禁止中断
+INTMSK 0X4A000008
+汇编代码：
+    mov r1, #0xffffffff
+33f80074:   e3e01000    mvn r1, #0  ; 0x0
+    ldr r0, =INTMSK 
+33f80078:   e59f0358    ldr r0, [pc, #856]  ; 33f803d8 <fiq+0x58>
+    str r1, [r0]
+33f8007c:   e5801000    str r1, [r0]
+# if defined(CONFIG_S3C2410)
+    ldr r1, =0x3ff  
+33f80080:   e59f1354    ldr r1, [pc, #852]  ; 33f803dc <fiq+0x5c>
+    ldr r0, =INTSUBMSK
+33f80084:   e59f0354    ldr r0, [pc, #852]  ; 33f803e0 <fiq+0x60>
+    str r1, [r0]
+33f80088:   e5801000    str r1, [r0]
+
+5.设置频率比
+FCLK is used by ARM920T.
+HCLK is used for AHB bus, which is used by the ARM920T, the memory controller,
+the interrupt controller, the
+LCD controller, the DMA and the USB host block.
+PCLK is used for APB bus, which is used by the peripherals such as WDT, IIS,
+I2C, PWM timer, MMC interface,
+ADC, UART, GPIO, RTC and SPI.
+
+CLKDIVN 0x4C000014 R/W Clock divider control register
+
+汇编代码：
+    /* FCLK:HCLK:PCLK = 1:2:4 */
+    /* default FCLK is 120 MHz ! */
+    ldr r0, =CLKDIVN
+33f8008c:   e59f0350    ldr r0, [pc, #848]  ; 33f803e4 <fiq+0x64>
+    mov r1, #3
+33f80090:   e3a01003    mov r1, #3  ; 0x3
+    str r1, [r0]
+33f80094:   e5801000    str r1, [r0]
+
+6.CPU初始化
+33f80098:   eb000018    bl  33f80100 <cpu_init_crit>
+The ARM920T coprocessor 15 registers are described under the following
+sections:
+•  Accessing CP15 registers on page 2-5
+•  Register 0: ID code register on page 2-7
+•  Register 0: Cache type register on page 2-8
+•  Register 1: Control register on page 2-10
+•  Register 2: Translation table base (TTB) register on page 2-12
+•  Register 3: Domain access control register on page 2-13
+•  Register 4: Reserved on page 2-14
+•  Register 5: Fault status registers on page 2-14
+•  Register 6: Fault address register on page 2-15
+•  Register 7: Cache operations on page 2-15
+•  Register 8: TLB operations on page 2-18
+•  Register 9: Cache lock down register on page 2-19
+•  Register 10: TLB lock down register on page 2-21
+•  Registers 11 -12 & 14: Reserved on page 2-22
+•  Register 13: Process ID on page 2-22
+•  Addresses in ARM920T on page 2-6
+•  Register 15: Test configuration register on page 2-24.
+
+
+汇编代码：
+    /*
+     * flush v4 I/D caches
+     */
+    mov r0, #0
+33f80100:   e3a00000    mov r0, #0  ; 0x0
+    mcr p15, 0, r0, c7, c7, 0   /* flush v3/v4 cache */
+33f80104:   ee070f17    mcr 15, 0, r0, cr7, cr7, {0}
+    mcr p15, 0, r0, c8, c7, 0   /* flush v4 TLB */
+33f80108:   ee080f17    mcr 15, 0, r0, cr8, cr7, {0}
+
+    /*
+     * disable MMU stuff and caches
+     */
+    mrc p15, 0, r0, c1, c0, 0
+33f8010c:   ee110f10    mrc 15, 0, r0, cr1, cr0, {0}
+    bic r0, r0, #0x00002300 @ clear bits 13, 9:8 (--V- --RS)
+33f80110:   e3c00c23    bic r0, r0, #8960   ; 0x2300
+    bic r0, r0, #0x00000087 @ clear bits 7, 2:0 (B--- -CAM)
+33f80114:   e3c00087    bic r0, r0, #135    ; 0x87
+    orr r0, r0, #0x00000002 @ set bit 2 (A) Align
+33f80118:   e3800002    orr r0, r0, #2  ; 0x2
+    orr r0, r0, #0x00001000 @ set bit 12 (I) I-Cache
+33f8011c:   e3800a01    orr r0, r0, #4096   ; 0x1000
+    mcr p15, 0, r0, c1, c0, 0
+33f80120:   ee010f10    mcr 15, 0, r0, cr1, cr0, {0}
+
+lowlevel_init:
+    /* memory control configuration */
+    /* make r0 relative the current location so that it */
+    /* reads SMRDATA out of FLASH rather than memory ! */
+    ldr     r0, =SMRDATA
+33f8e5f4:   e59f0020    ldr r0, [pc, #32]   ; 33f8e61c <lowlevel_init+0x28>
+    ldr r1, _TEXT_BASE
+33f8e5f8:   e51f1010    ldr r1, [pc, #-16]  ; 33f8e5f0 <_TEXT_BASE>
+    sub r0, r0, r1
+33f8e5fc:   e0400001    sub r0, r0, r1
+    ldr r1, =BWSCON /* Bus Width Status Controller */
+33f8e600:   e3a01312    mov r1, #1207959552 ; 0x48000000
+    add     r2, r0, #13*4
+33f8e604:   e2802034    add r2, r0, #52 ; 0x34
+0:
+    ldr     r3, [r0], #4
+33f8e608:   e4903004    ldr r3, [r0], #4
+    str     r3, [r1], #4
+33f8e60c:   e4813004    str r3, [r1], #4
+    cmp     r2, r0
+33f8e610:   e1520000    cmp r2, r0
+    bne     0b
+33f8e614:   1afffffb    bne 33f8e608 <lowlevel_init+0x14>
+
+7.重定位
+relocate:               /* relocate U-Boot to RAM       */
+    adr r0, _start      /* r0 <- current position of code   */
+33f8009c:   e24f00a4    sub r0, pc, #164    ; 0xa4
+    ldr r1, _TEXT_BASE      /* test if we run from flash or RAM */
+33f800a0:   e51f1068    ldr r1, [pc, #-104] ; 33f80040 <_TEXT_BASE>
+    cmp     r0, r1                  /* don't reloc during debug         */
+33f800a4:   e1500001    cmp r0, r1
+    beq     stack_setup
+33f800a8:   0a000007    beq 33f800cc <stack_setup>
+
+    ldr r2, _armboot_start
+33f800ac:   e51f2070    ldr r2, [pc, #-112] ; 33f80044 <_armboot_start>
+    ldr r3, _bss_start
+33f800b0:   e51f3070    ldr r3, [pc, #-112] ; 33f80048 <_bss_start>
+    sub r2, r3, r2      /* r2 <- size of armboot            */
+33f800b4:   e0432002    sub r2, r3, r2
+    add r2, r0, r2      /* r2 <- source end address         */
+33f800b8:   e0802002    add r2, r0, r2
+
+33f800bc <copy_loop>:
+
+copy_loop:
+    ldmia   r0!, {r3-r10}       /* copy from source address [r0]    */
+33f800bc:   e8b007f8    ldmia   r0!, {r3, r4, r5, r6, r7, r8, r9, sl}
+    stmia   r1!, {r3-r10}       /* copy to   target address [r1]    */
+33f800c0:   e8a107f8    stmia   r1!, {r3, r4, r5, r6, r7, r8, r9, sl}
+    cmp r0, r2          /* until source end addreee [r2]    */
+33f800c4:   e1500002    cmp r0, r2
+    ble copy_loop
+33f800c8:   dafffffb    ble 33f800bc <copy_loop>
+
+8.设置堆栈
+    /* Set up the stack                         */
+stack_setup:
+    ldr r0, _TEXT_BASE      /* upper 128 KiB: relocated uboot   */
+33f800cc:   e51f0094    ldr r0, [pc, #-148] ; 33f80040 <_TEXT_BASE>
+    sub r0, r0, #CFG_MALLOC_LEN /* malloc area                      */
+33f800d0:   e2400803    sub r0, r0, #196608 ; 0x30000
+    sub r0, r0, #CFG_GBL_DATA_SIZE /* bdinfo                        */
+33f800d4:   e2400080    sub r0, r0, #128    ; 0x80
+#ifdef CONFIG_USE_IRQ
+    sub r0, r0, #(CONFIG_STACKSIZE_IRQ+CONFIG_STACKSIZE_FIQ)
+#endif
+    sub sp, r0, #12     /* leave 3 words for abort-stack    */
+33f800d8:   e240d00c    sub sp, r0, #12 ; 0xc
+
+9.清零bss
+clear_bss:
+    ldr r0, _bss_start      /* find start of bss segment        */
+33f800dc:   e51f009c    ldr r0, [pc, #-156] ; 33f80048 <_bss_start>
+    ldr r1, _bss_end        /* stop here                        */
+33f800e0:   e51f109c    ldr r1, [pc, #-156] ; 33f8004c <_bss_end>
+    mov r2, #0x00000000     /* clear                            */
+33f800e4:   e3a02000    mov r2, #0  ; 0x0
+
+33f800e8 <clbss_l>:
+
+clbss_l:str r2, [r0]        /* clear loop...                    */
+33f800e8:   e5802000    str r2, [r0]
+    add r0, r0, #4
+33f800ec:   e2800004    add r0, r0, #4  ; 0x4
+    cmp r0, r1
+33f800f0:   e1500001    cmp r0, r1
+    ble clbss_l
+33f800f4:   dafffffb    ble 33f800e8 <clbss_l>
+
+10.进入C代码start_armboot(lib_arm/board.c)
+
+10.1调用初始化函数
+init_fnc_t *init_sequence[] = {
+    cpu_init,       /* basic cpu dependent setup */
+#if defined(CONFIG_SKIP_RELOCATE_UBOOT)
+    reloc_init,     /* Set the relocation done flag, must
+                   do this AFTER cpu_init(), but as soon
+                   as possible */
+#endif
+    board_init,     /* basic board dependent setup */
+    interrupt_init,     /* set up exceptions */
+    env_init,       /* initialize environment */
+    init_baudrate,      /* initialze baudrate settings */
+    serial_init,        /* serial communications setup */
+    console_init_f,     /* stage 1 init of console */
+    display_banner,     /* say that we are here */
+#if defined(CONFIG_DISPLAY_CPUINFO)
+    print_cpuinfo,      /* display cpu info (and speed) */
+#endif
+#if defined(CONFIG_DISPLAY_BOARDINFO)
+    checkboard,     /* display board info */
+#endif
+#if defined(CONFIG_HARD_I2C) || defined(CONFIG_SOFT_I2C)
+    init_func_i2c,
+#endif
+    dram_init,      /* configure available RAM banks */
+    display_dram_config,
+    NULL,
+};
+
+10.2 flash初始化 flash_init
+
+10.3 nand_init
+serial_initialize
+devices_init
+enable_interrupts
+main_loop
+

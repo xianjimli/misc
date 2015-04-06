@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: active-sync-mobile host
+Description: active-sync-mobile host side protocol implementation.
+Version: @VERSION@
+Libs: -L${libdir} -lasm-rapi-host -lasm-rrac-host -lasm-rapi-common -lasm-rrac-common -lasm-common
+Cflags: -I${includedir}/asm
+
+

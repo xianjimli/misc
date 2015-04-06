@@ -1,0 +1,2 @@
+AsmRet:Process:Create_Process:RKEY key, WStr* sub_key, WStr* class_name,:RKEY* result, unsigned int* disposition
+AsmRet:Process:Open_Process:RKEY key, WStr* sub_key, WStr* class_name,:RKEY* result, unsigned int* disposition

@@ -1,0 +1,39 @@
+0.创建文件系统
+dd if=/dev/zero of=hda.raw bs=1024 count=1048576
+
+1.创建分区表并格式化
+losetup /dev/loop0 hda.raw
+fdisk /dev/loop0
+(一个主分区一个交换分区)
+/sbin/parted -s hda.raw mkfs 1 ext2
+
+2.mount第一个分区到一个目录
+file hda.raw
+
+hda.raw: x86 boot sector; partition 1: ID=0x83, starthead 1, startsector 63, 1606437 sectors; partition 2: ID=0x82, starthead 0, startsector 1606500, 481950 sectors
+
+计算出offset=63(startsector)*512 = 32256
+mkdir rootfs
+mount -o loop,offset=32256 hda.raw rootfs/
+
+3.创建基本的文件系统
+在fedaro下加多下面两个步骤。
+yum install apt
+yum install debootstrap
+
+debootstrap --arch i386 etch rootfs/ http://ftp.us.debian.org/debian
+
+4.拷贝网络脚本
+cp /etc/resolv.conf rootfs/etc
+cp /etc/hosts rootfs/etc
+
+5.安装内核
+chroot rootfs apt-get update
+chroot rootfs apt-get -y install linux-image-2.6-486 grub
+#mkdir -p rootfs/boot/grub
+#echo "(hd0)     /dev/hda" >rootfs/boot/grub/device.map
+#grub-install --root-directory=rootfs /dev/loop0
+
+6.运行qemu
+qemu -kernel rootfs/boot/vmlinuz-2.6.18-6-486 -initrd rootfs/boot/initrd.img-2.6.18-6-486 -hda hda.raw -append "root=/dev/hda1 vga=788"
+

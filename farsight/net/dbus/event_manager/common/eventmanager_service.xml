@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<node name="/">
+  <interface name="org.broncho.EventManagerInterface">
+    <annotation name="org.freedesktop.DBus.GLib.CSymbol" value="eventmanager_service"/>
+
+    <signal name="Event">
+         <arg type="s" name="type"/>
+         <arg type="i" name="status"/>
+         <arg type="s" name="detail"/>
+    </signal>
+
+    <method name="TriggerEvent">
+         <arg type="s" name="type" />
+         <arg type="i" name="status" />
+         <arg type="s" name="detail" />
+    </method>
+    
+    <method name="QueryEvent">
+         <arg type="s" name="type" />
+         <arg type="i" name="status" direction="out" />
+         <arg type="s" name="detail" direction="out" />
+    </method>
+    
+  </interface>
+</node>
+

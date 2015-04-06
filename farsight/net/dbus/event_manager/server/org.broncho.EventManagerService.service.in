@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.broncho.EventManagerService
+Exec=@prefix@/bin/actiondaemon
+User=root

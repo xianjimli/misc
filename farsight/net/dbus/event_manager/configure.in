@@ -1,0 +1,41 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.59)
+AC_INIT(FULL-PACKAGE-NAME, VERSION, BUG-REPORT-ADDRESS)
+AC_CONFIG_SRCDIR([common/eventmanager_type.h])
+AC_CONFIG_HEADER([config.h])
+AM_INIT_AUTOMAKE(event-manager, 0.7)
+
+# Checks for programs.
+AC_PROG_CXX
+AC_PROG_CC
+AC_PROG_LIBTOOL
+
+# Checks for libraries.
+
+# Checks for libraries.
+pkg_modules="dbus-glib-1 dbus-1 gthread-2.0"
+PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+AC_SUBST(PACKAGE_CFLAGS)
+AC_SUBST(PACKAGE_LIBS)
+
+AC_ARG_WITH(dbus_service_dir, [  --with-dbus-service-dir=PATH choose directory for dbus service files, [default=PREFIX/share/dbus-1/services]], with_dbus_service_dir="$withval", with_dbus_service_dir=$datadir/dbus-1/system-services)
+
+DBUS_SERVICE_DIR=$with_dbus_service_dir
+AC_SUBST(DBUS_SERVICE_DIR)
+
+# Checks for header files.
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+
+# Checks for library functions.
+
+AC_CONFIG_FILES([Makefile
+                 client/Makefile
+                 client/eventmanager.pc
+                 common/Makefile
+                 server/Makefile
+                 server/org.broncho.EventManagerService.service])
+AC_OUTPUT

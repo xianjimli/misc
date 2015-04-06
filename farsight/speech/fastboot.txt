@@ -1,0 +1,38 @@
+ARM启动流程
+选择高性能的器件：
+	CPU
+	内存
+	Flash
+性能分析工具：
+	sysprofile
+	Oprofile
+	bootchart
+	VTune
+	LD_DEBUG
+工具:
+	toolchain
+		eabi
+		gnu hash
+	prelink
+	thumb
+手段：
+	XIP
+	Kernel加速
+	只读文件系统
+	合并进程
+	定制initrc
+	readahead
+	preload
+	ccache
+	MMX
+	优化程序
+	延迟加载
+	选择轻量级的GUI
+	删除不必要的文件
+	减少动态库
+	减少服务的依赖，并发起动。
+	使用overlay，减少开关动画的开销
+	开关机动画和音乐选择简单的文件
+	使用特定的优化库(如IPP)
+	选择轻量级的GUI
+

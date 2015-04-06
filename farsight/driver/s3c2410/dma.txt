@@ -1,0 +1,86 @@
+HW source
+Ch-0 nXDREQ0 UART0    SDI  Timer USB device EP1
+Ch-1 nXDREQ1 UART1  I2SSDI SPI0  USB device EP2
+Ch-2  I2SSDO I2SSDI   SDI  Timer USB device EP3
+Ch-3   UART2   SDI   SPI1  Timer USB device EP4
+
+XSCLK 系统时钟
+XnXDREQ 请求
+XnXDACK 传输
+
+DMA INITIAL SOURCE (DISRC) REGISTER
+DMA INITIAL SOURCE CONTROL (DISRCC) REGISTER
+DMA INITIAL DESTINATION (DIDST) REGISTER
+DMA INITIAL DESTINATION CONTROL (DIDSTC) REGISTER
+DMA CONTROL (DCON) REGISTER
+DMD_HS [31] Select one between Demand mode and Handshake mode. 0
+            0: Demand mode is selected.
+            1: Handshake mode is selected.
+            In the Handshake mode, DMA controller waits for the deasserted
+			DREQ before starting a new transfer. 
+                                                                            0
+SYNC [30] Select DREQ/DACK synchronization.
+          0: DREQ and DACK are synchronized to PCLK (APB clock).
+          1: DREQ and DACK are synchronized to HCLK (AHB clock).
+          Therefore, for devices attached to AHB system bus, this bit has
+          to be set to 1, while for those attached to APB system, it should
+          be set to 0. For the devices attached to external systems, the
+          user should select this bit depending on which the external
+          system is synchronized with between AHB system and APB
+          system.
+
+INT [29] Enable/Disable the interrupt setting for CURR_TC (terminal
+         count)
+TSZ [28] Select the transfer size of an atomic transfer
+         (i.e. transfer performed each time DMA owns the bus before
+         releasing the bus).
+
+SERVMODE [27] Select the service mode between Single service mode and Whole           0
+              service mode.
+              0: Single service mode is selected in which after each atomic transfer
+              (single or burst of length four) DMA stops and waits for another DMA
+              request.
+              1: Whole service mode is selected in which one request gets atomic
+              transfers to be repeated until the transfer count reaches to 0. In this
+              mode, additional request are not required.
+HWSRCSEL [26:24] Select DMA request source for each DMA.
+                                                                              0
+SWHW_SE [23] Select the DMA source between software (S/W request mode) and
+L            hardware (H/W request mode).
+             0: S/W request mode is selected and DMA is triggered by setting
+                SW_TRIG bit of DMASKTRIG control register.
+             1: DMA source selected by bit[26:24] triggers the DMA operation.
+                                          0
+RELOAD [22] Set the reload on/off option.
+DSZ [21:20] Data size to be transferred.            00
+            00 = Byte                01 = Half word
+            10 = Word               11 = reserved
+TC [19:0] Initial transfer count (or transfer beat).
+
+DMA STATUS (DSTAT) REGISTER
+	STAT: Status of this DMA controller.
+	CURR_TC [19:0] Current value of transfer count.
+DMA CURRENT SOURCE (DCSRC) REGISTER
+CURRENT DESTINATION (DCDST) REGISTER
+DMA MASK TRIGGER (DMASKTRIG) REGISTER
+	STOP   : Stop the DMA operation.
+	ON_OFF : DMA channel on/off bit
+	SW_TRIG: Trigger the DMA channel in S/W request mode.
+
+s3c2410_dma_add:s3c2410_dma_init:s3c24xx_dma_init(4, IRQ_DMA0, 0x40)
+dma_base = ioremap(S3C24XX_PA_DMA, stride * channels);
+    for (channel = 0; channel < channels;  channel++) {
+        cp = &s3c2410_chans[channel];
+
+        memset(cp, 0, sizeof(struct s3c2410_dma_chan));
+
+        /* dma channel irqs are in order.. */
+        cp->number = channel;
+        cp->irq    = channel + irq;
+        cp->regs   = dma_base + (channel * stride);
+
+struct s3c2410_dma_chan s3c2410_chans[S3C2410_DMA_CHANNELS];
+
+s3c2410_dma_ctrl
+case S3C2410_DMAOP_START:
+

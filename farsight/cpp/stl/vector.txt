@@ -1,0 +1,23 @@
+Accessing members of a vector can be done in constant time, appending elements to a vector can be done in amortized constant time, whereas locating a specific value or inserting elements into the vector takes linear time.
+Constructors	create vectors and initialize them with some data
+Operators	compare, assign, and access elements of a vector
+assign	assign elements to a vector
+at	returns an element at a specific location
+back	returns a reference to last element of a vector
+begin	returns an iterator to the beginning of the vector
+capacity	returns the number of elements that the vector can hold
+clear	removes all elements from the vector
+empty	true if the vector has no elements
+end	returns an iterator just past the last element of a vector
+erase	removes elements from a vector
+front	returns a reference to the first element of a vector
+insert	inserts elements into the vector
+max_size	returns the maximum number of elements that the vector can hold
+pop_back	removes the last element of a vector
+push_back	add an element to the end of the vector
+rbegin	returns a reverse_iterator to the end of the vector
+rend	returns a reverse_iterator to the beginning of the vector
+reserve	sets the minimum capacity of the vector
+resize	change the size of the vector
+size	returns the number of items in the vector
+swap	swap the contents of this vector with another

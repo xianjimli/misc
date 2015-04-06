@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General strings -->
+
+    <!-- label for the icon meaning 'show me all the images' -->
+    <string name="app_image_mode">PdfIReader</string>
+    <string name="app_text_mode">PdfTReader</string>
+    <string name="open">Open</string>
+    <string name="settings">Settings</string>
+    <string name="rotate">Rotate</string>
+    <string name="seek">Seek</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="alert_dialog_username">User</string>
+    <string name="alert_dialog_password">Password</string>
+    <string name="all_images">All pictures</string>
+    <string name="share">Share</string>
+    <string name="about">About</string>
+    <string name="text_mode">Text</string>
+    <string name="image_mode">Image</string>
+    <string name="open_prompt">Please input filename:</string>
+    <string name="seek_prompt">Please input page number(0-%d):</string>
+    <string name="sendImage">Share picture via</string>
+    <string name="send_text">Share text via</string>
+    <string name="open_fail">%s doest not exist or is not pdf document.</string>
+    <string name="open_null">No file is open.</string>
+    <string name="file_browse">Browse</string>
+    <string name="select">Select</string>
+    <string name="back">Back</string>
+    <string name="loading">Loading</string>
+    
+</resources>

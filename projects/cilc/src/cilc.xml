@@ -1,0 +1,14 @@
+<cil name="Player">
+	<command name="load" >
+		<input  prefix="load ok" format="filiename=%{filename[200]}s priority=%{priority}d ok" />
+		<output prefix="load ok" format="ret=%{ret}d" />
+	</command>
+	<command name="play" >
+		<input  prefix="play ok" format="" />
+		<output prefix="play ok" format="ret=%{ret}d" />
+	</command>
+	<command name="get_info" >
+		<input prefix="get_info ok" format="ret=%{ret}d" />
+		<output  prefix="get_info ok" format="singer=%{singer[32]}s priority=%{priority}d ok" />
+	</command>
+</cil>

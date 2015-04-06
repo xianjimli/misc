@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: active-sync-mobile device
+Description: active-sync-mobile device side protocol implementation.
+Version: @VERSION@
+Libs: -L${libdir} -lasm-rapi-device -lasm-rrac-device -lasm-rapi-common -lasm-rrac-common -lasm-common
+Cflags: -I${includedir}/asm
+
+

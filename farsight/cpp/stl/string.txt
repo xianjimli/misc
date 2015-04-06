@@ -1,0 +1,36 @@
+The string class provides a useful way to manipulate and store sequences of characters, and is defined in the std namespace in the <string> header file.
+Constructors	create strings from arrays of characters and other strings
+Operators	concatenate strings, assign strings, use strings for I/O, compare strings
+append	append characters and strings onto a string
+assign	give a string values from strings of characters and other C++ strings
+at	returns the character at a specific location
+begin	returns an iterator to the beginning of the string
+c_str	returns a non-modifiable standard C character array version of the string
+capacity	returns the number of characters that the string can hold
+clear	removes all characters from the string
+compare	compares two strings
+copy	copies characters from a string into an array
+data	returns a pointer to the first character of a string
+empty	true if the string has no characters
+end	returns an iterator just past the last character of a string
+erase	removes characters from a string
+find	find characters in the string
+find_first_not_of	find first absence of characters
+find_first_of	find first occurrence of characters
+find_last_not_of	find last absence of characters
+find_last_of	find last occurrence of characters
+getline	read data from an I/O stream into a string
+insert	insert characters into a string
+length	returns the length of the string
+max_size	returns the maximum number of characters that the string can hold
+push_back	add a character to the end of the string
+rbegin	returns a reverse_iterator to the end of the string
+rend	returns a reverse_iterator to the beginning of the string
+replace	replace characters in the string
+reserve	sets the minimum capacity of the string
+resize	change the size of the string
+rfind	find the last occurrence of a substring
+size	returns the number of items in the string
+substr	returns a certain substring
+swap	swap the contents of this string with another
+

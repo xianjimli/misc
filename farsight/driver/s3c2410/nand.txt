@@ -1,0 +1,113 @@
+PIN CONFIGURATION
+   D[7:0]   : Data/Command/Address In/Out Port (shared with the data bus)
+   CLE      : Command Latch Enable (Output)
+   ALE      : Address Latch Enable (Output)
+   nFCE     : NAND Flash Chip Enable (Output)
+   nFRE     : NAND Flash Read Enable (Output)
+   nFWE     : NAND Flash Write Enable (Output)
+   nWAIT    : NAND Flash Ready/nBusy (Input)
+
+NAND FLASH CONFIGURATION (NFCONF) REGISTER
+	Enable/Disable
+	Initialize ECC
+	NAND Flash Memory chip enable
+	TACLS
+	TWRPH0 write phase 0
+	TWRPH1
+NAND FLASH COMMAND SET (NFCMD) REGISTER
+NAND FLASH ADDRESS SET (NFADDR) REGISTER
+NAND FLASH DATA (NFDATA) REGISTER
+NAND FLASH OPERATION STATUS (NFSTAT) REGISTER
+NAND FLASH ECC (NFECC) REGISTER
+
+s3c24xx_nand_probe
+clk_get(&pdev->dev, "nand")
+clk_enable(info->clk);
+
+plat-s3c/clock.c
+plat-s3c24xx/s3c2410-clock.c
+CLOCK CONTROL REGISTER (CLKCON)控制每种外设的时钟是否打开
+
+plat-s3c24xx/devs.c platform设备列表，resource里实际上NAND相关的寄存器
+struct platform_device s3c_device_nand = {
+    .name         = "s3c2410-nand",
+    .id       = -1,
+    .num_resources    = ARRAY_SIZE(s3c_nand_resource),
+    .resource     = s3c_nand_resource,
+};
+
+s3c2410_nand_inithw 设置WE的几个参数并enable设备
+plat-s3c24xx/common-smdk.c 分区定义
+static struct s3c2410_nand_set smdk_nand_sets[] = {
+    [0] = {
+        .name       = "NAND",
+        .nr_chips   = 1,
+        .nr_partitions  = ARRAY_SIZE(smdk_default_nand_part),
+        .partitions = smdk_default_nand_part,
+    },
+};
+
+注册每一个分区
+    for (setno = 0; setno < nr_sets; setno++, nmtd++) {
+        pr_debug("initialising set %d (%p, info %p)\n", setno, nmtd, info);
+
+        s3c2410_nand_init_chip(info, nmtd, sets);
+
+        nmtd->scan_res = nand_scan_ident(&nmtd->mtd,
+                         (sets) ? sets->nr_chips : 1);
+
+        if (nmtd->scan_res == 0) {
+            s3c2410_nand_update_chip(info, nmtd);
+            nand_scan_tail(&nmtd->mtd);
+            s3c2410_nand_add_partition(info, nmtd, sets);
+        }
+
+        if (sets != NULL)
+      
+s3c2410_nand_cpufreq_register: 注册频率改变函数，重新调整时钟
+
+s3c2410_nand_select_chip 主要目的是enable FCE
+
+s3c24xx_nand_resume里为什么要调用clk_disable
+
+
+add_mtd_device通知每一个关注者
+	list_for_each_entry(not, &mtd_notifiers, list)
+                not->add(mtd);
+register_mtd_blktrans注册关注回调函数
+register_mtd_user(&blktrans_notifier);
+有新的分区加入时调用blktrans_notify_add
+list_for_each_entry(tr, &blktrans_majors, list)
+        tr->add_mtd(tr, mtd);
+init_mtdblock调用register_mtd_blktrans注册到blktrans_majors
+最后函数调到mtdblock_add_mtd到add_mtd_blktrans_dev到add_disk
+static struct mtd_blktrans_ops mtdblock_tr = {
+    .name       = "mtdblock",
+    .major      = 31,
+    .part_bits  = 0,
+    .blksize    = 512,
+    .open       = mtdblock_open,
+    .flush      = mtdblock_flush,
+    .release    = mtdblock_release,
+    .readsect   = mtdblock_readsect,
+    .writesect  = mtdblock_writesect,
+    .add_mtd    = mtdblock_add_mtd,
+    .remove_dev = mtdblock_remove_dev,
+    .owner      = THIS_MODULE,
+};
+
+mtdblock_readsect->do_cached_read->mtd_info->read
+mtd_info->read指向nand_read,在nand_scan_tail中初始化
+nand_read->nand_do_read_ops->chip->ecc.read_subpage
+nand_read_page_hwecc->chip->read_buf(s3c2410_nand_read_buf)
+
+chip的虚函数在s3c2410_nand_init_chip里初始化
+
+
+mtd/mtd_blkdevs.c:mtd_blktrans_thread
+elv_next_request:从电梯算法中取一个请求
+do_blktrans_request调用tr->writesect
+end_request
+
+
+

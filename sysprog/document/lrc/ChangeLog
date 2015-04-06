@@ -1,0 +1,21 @@
+2007-5-1 Li Xianjing <xianjimli@hotmail.com>
+	* fixed a bug in lrc.pc.in.
+	* added extern "C" in lrc.h.
+	* removed some compile warnings.
+	* Release 0.4
+
+2007-4-16 Li Xianjing <xianjimli@hotmail.com>
+	* Release 0.3
+	* Fixed a bug in lrc_defaultbuilder.h, LRC_DUMP_BUILDER_H --> LRC_DEFAULT_BUILDER_H.
+	* Fixed a bug in lrc_get_id_tag_get_by_key, 
+	  strcmp(key, lrc_id_tag_get_key(&iter)) --> strcmp(key, lrc_id_tag_iter_get_key(&iter))
+	* add prototypes for lrc_time_tag_get_pause_time and lrc_time_tag_get_repeat_times.
+	* thanks to lanhai <http://blog.csdn.net/lanhai/>
+	
+2006-8-24 Li Xianjing <xianjimli@hotmail.com>
+	* Release 0.2
+	* fixed a bug in lrc_default_builder_on_lrc.
+
+2006-6-3 Li Xianjing <xianjimli@hotmail.com>
+	* Release 0.1
+

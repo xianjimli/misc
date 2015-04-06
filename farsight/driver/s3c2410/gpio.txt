@@ -1,0 +1,42 @@
+The S3C2410X has 117 multi-functional input/output port pins. The ports are:
+— Port A (GPA): 23-output port
+— Port B (GPB): 11-input/output port
+— Port C (GPC): 16-input/output port
+— Port D (GPD): 16-input/output port
+— Port E (GPE): 16-input/output port
+— Port F (GPF): 8-input/output port
+— Port G (GPG): 16-input/output port
+— Port H (GPH): 11-input/output port
+
+GPBCON 0x56000010 R/W Configure the pins of port B          0x0
+GPBDAT 0x56000014 R/W The data register for port B        Undefined
+GPBUP 0x56000018 R/W Pull-up disable register for port B   0x0
+MISCELLANEOUS CONTROL REGISTER (MISCCR)
+DCLK CONTROL REGISTERS (DCLKCON)
+EXTERNAL INTERRUPT CONTROL REGISTER (EXTINTn) 外部中断的trigger方式：高低上下等
+EXTERNAL INTERRUPT FILTER REGISTER (EINTFLTn) 持续时间
+GENERAL STATUS REGISTER (GSTATUSn)
+
+
+plat-s3c24xx/gpio.c
+s3c2410_gpio_cfgpin
+s3c2410_gpio_getcfg
+s3c2410_gpio_getcfg
+s3c2410_gpio_getpin
+s3c2410_gpio_setpin
+s3c2410_gpio_pullup
+s3c2410_gpio_getpull
+
+drivers/gpio/gpiolib.c GPIO管理
+示例：
+/* Configure the LEDs (even if we have no LED support)*/
+
+    s3c2410_gpio_cfgpin(S3C2410_GPF4, S3C2410_GPF4_OUTP);
+    s3c2410_gpio_cfgpin(S3C2410_GPF5, S3C2410_GPF5_OUTP);
+    s3c2410_gpio_cfgpin(S3C2410_GPF6, S3C2410_GPF6_OUTP);
+    s3c2410_gpio_cfgpin(S3C2410_GPF7, S3C2410_GPF7_OUTP);
+
+    s3c2410_gpio_setpin(S3C2410_GPF4, 1);
+    s3c2410_gpio_setpin(S3C2410_GPF5, 1);
+    s3c2410_gpio_setpin(S3C2410_GPF6, 1);
+    s3c2410_gpio_setpin(S3C2410_GPF7, 1);

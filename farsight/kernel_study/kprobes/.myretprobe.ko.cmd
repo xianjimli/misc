@@ -1,0 +1,1 @@
+cmd_/home/work/mine/farsight/kernel_study/kprobes/myretprobe.ko := ld -r -m elf_i386  --build-id -o /home/work/mine/farsight/kernel_study/kprobes/myretprobe.ko /home/work/mine/farsight/kernel_study/kprobes/myretprobe.o /home/work/mine/farsight/kernel_study/kprobes/myretprobe.mod.o

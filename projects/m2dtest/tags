@@ -1,0 +1,572 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+CHECK_BOUNDARY	m2d_lib.c	669;"	d	file:
+CHECK_BOUNDARY	m2d_lib.c	704;"	d	file:
+CHECK_LINE_BOUNDARY	m2d_lib.c	679;"	d	file:
+CHECK_LINE_BOUNDARY	m2d_lib.c	705;"	d	file:
+CMDBUF_SAFE_ROOM	m2d_lib.c	106;"	d	file:
+CMDBUF_SIZE	m2d_lib.c	107;"	d	file:
+CONFIG_CHECK_BOUNDARY	m2d_lib.c	64;"	d	file:
+CONFIG_M2D_USE_PROC	m2d_drv.c	71;"	d	file:
+DECIMATE_ONLY	gcu.c	16;"	d	file:
+DECIMATE_ROTATE	gcu.c	22;"	d	file:
+DECIMATE_STRETCH	gcu.c	18;"	d	file:
+DUMP_CMDBUF	m2d_lib.c	641;"	d	file:
+DUMP_CMDBUF	m2d_lib.c	649;"	d	file:
+ERR_IPF	m2d_lib.h	/^	ERR_IPF,	\/* Invalid pixel format *\/$/;"	e	enum:__anon2
+ERR_OK	m2d_lib.h	/^	ERR_OK = 0,$/;"	e	enum:__anon2
+ERR_OOB	m2d_lib.h	/^	ERR_OOB,	\/* Out of Boundary *\/$/;"	e	enum:__anon2
+ERR_REG	m2d_lib.h	/^	ERR_REG,	\/* Invalid ALU scratchpad register nr *\/$/;"	e	enum:__anon2
+FALSE	gcu.h	25;"	d
+FORMAT_PACKED_444	gcu.h	29;"	d
+FORMAT_PLANAR_420	gcu.h	32;"	d
+FORMAT_PLANAR_422	gcu.h	31;"	d
+FORMAT_PLANAR_444	gcu.h	30;"	d
+FORMAT_RGB	gcu.h	28;"	d
+GCCR_ABORT	m2d_drv.c	100;"	d	file:
+GCCR_BP_RST	m2d_drv.c	101;"	d	file:
+GCCR_MASK	m2d_drv.c	98;"	d	file:
+GCCR_STOP	m2d_drv.c	99;"	d	file:
+GCCR_SYNC_CLR	m2d_drv.c	102;"	d	file:
+GCIECR_BF_INTEN	m2d_drv.c	107;"	d	file:
+GCIECR_EEOB_INTEN	m2d_drv.c	110;"	d	file:
+GCIECR_EOB_INTEN	m2d_drv.c	105;"	d	file:
+GCIECR_FLAG_INTEN	m2d_drv.c	113;"	d	file:
+GCIECR_IIN_INTEN	m2d_drv.c	109;"	d	file:
+GCIECR_IN_INTEN	m2d_drv.c	106;"	d	file:
+GCIECR_IOP_INTEN	m2d_drv.c	108;"	d	file:
+GCIECR_MASK	m2d_drv.c	104;"	d	file:
+GCIECR_PF_INTEN	m2d_drv.c	111;"	d	file:
+GCIECR_STOP_INTEN	m2d_drv.c	112;"	d	file:
+GCISCR_BF_INTST	m2d_drv.c	118;"	d	file:
+GCISCR_EEOB_INTST	m2d_drv.c	121;"	d	file:
+GCISCR_EOB_INTST	m2d_drv.c	116;"	d	file:
+GCISCR_FLAG_INTST	m2d_drv.c	124;"	d	file:
+GCISCR_IIN_INTST	m2d_drv.c	120;"	d	file:
+GCISCR_IN_INTST	m2d_drv.c	117;"	d	file:
+GCISCR_IOP_INTST	m2d_drv.c	119;"	d	file:
+GCISCR_MASK	m2d_drv.c	115;"	d	file:
+GCISCR_PF_INTST	m2d_drv.c	122;"	d	file:
+GCISCR_STOP_INTST	m2d_drv.c	123;"	d	file:
+GCU_BIAS_OP	m2d_lib.h	/^} GCU_BIAS_OP;$/;"	t	typeref:enum:__anon5
+GCU_BIAS_OP_ADD	m2d_lib.h	/^	GCU_BIAS_OP_ADD		= 0,$/;"	e	enum:__anon5
+GCU_BIAS_OP_SUB	m2d_lib.h	/^	GCU_BIAS_OP_SUB		= 1,$/;"	e	enum:__anon5
+GCU_BLEND_OP	m2d_lib.h	/^} GCU_BLEND_OP;$/;"	t	typeref:enum:__anon4
+GCU_BLEND_OP_ADD	m2d_lib.h	/^	GCU_BLEND_OP_ADD	= 0,$/;"	e	enum:__anon4
+GCU_BLEND_OP_REVERSE_SUB	m2d_lib.h	/^	GCU_BLEND_OP_REVERSE_SUB= 2$/;"	e	enum:__anon4
+GCU_BLEND_OP_SUB	m2d_lib.h	/^	GCU_BLEND_OP_SUB	= 1,$/;"	e	enum:__anon4
+GCU_BUFFI_ADDR	m2d_drv.c	/^} GCU_BUFFI_ADDR;$/;"	t	typeref:enum:__anon8	file:
+GCU_BUFFI_ADDR	m2d_lib.c	/^} GCU_BUFFI_ADDR;$/;"	t	typeref:enum:__anon1	file:
+GCU_CKBLT_KEY	m2d_lib.h	/^} GCU_CKBLT_KEY;$/;"	t	typeref:enum:__anon6
+GCU_CKBLT_KEY_ALPHA	m2d_lib.h	/^	GCU_CKBLT_KEY_ALPHA	= 3,$/;"	e	enum:__anon6
+GCU_CKBLT_KEY_BLUE	m2d_lib.h	/^	GCU_CKBLT_KEY_BLUE	= 0,$/;"	e	enum:__anon6
+GCU_CKBLT_KEY_GREEN	m2d_lib.h	/^	GCU_CKBLT_KEY_GREEN	= 1,$/;"	e	enum:__anon6
+GCU_CKBLT_KEY_RED	m2d_lib.h	/^	GCU_CKBLT_KEY_RED	= 2,$/;"	e	enum:__anon6
+GCU_COLOR_VALUE	m2d_lib.h	/^typedef uint64_t GCU_COLOR_VALUE;$/;"	t
+GCU_ERR_ILLEGAL_INSTRUCTION	m2d_drv.c	/^	GCU_ERR_ILLEGAL_INSTRUCTION,	\/* illegal instruction *\/$/;"	e	enum:__anon10	file:
+GCU_ERR_ILLEGAL_OPERATION	m2d_drv.c	/^	GCU_ERR_ILLEGAL_OPERATION,	\/* illegal operation *\/$/;"	e	enum:__anon10	file:
+GCU_ERR_ILLEGAL_PF	m2d_drv.c	/^	GCU_ERR_ILLEGAL_PF,		\/* illegal pixel format *\/$/;"	e	enum:__anon10	file:
+GCU_ERR_NONE	m2d_drv.c	/^	GCU_ERR_NONE = 0,		\/* no error *\/$/;"	e	enum:__anon10	file:
+GCU_ERR_PIXEL_ALU	m2d_drv.c	/^	GCU_ERR_PIXEL_ALU,		\/* event occurs in ALU *\/$/;"	e	enum:__anon10	file:
+GCU_ERR_TYPE	m2d_drv.c	/^} GCU_ERR_TYPE;$/;"	v	typeref:enum:__anon10
+GCU_LIMIT	gcu.c	13;"	d	file:
+GCU_MAKE_PXLFMT	m2d_lib.h	56;"	d
+GCU_PIXEL_FORMAT	m2d_lib.h	/^} GCU_PIXEL_FORMAT;$/;"	t	typeref:enum:__anon3
+GCU_PXLFMT_FORMAT	m2d_lib.h	58;"	d
+GCU_PXLFMT_INDEXED_8	m2d_lib.h	/^	GCU_PXLFMT_INDEXED_8		= GCU_MAKE_PXLFMT(0x0, 1),$/;"	e	enum:__anon3
+GCU_PXLFMT_REGISTER	m2d_lib.h	/^	GCU_PXLFMT_REGISTER		= -1,$/;"	e	enum:__anon3
+GCU_PXLFMT_RGB161616	m2d_lib.h	/^	GCU_PXLFMT_RGB161616		= GCU_MAKE_PXLFMT(0xa, 8),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGB555	m2d_lib.h	/^	GCU_PXLFMT_RGB555		= GCU_MAKE_PXLFMT(0x1, 2),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGB565	m2d_lib.h	/^	GCU_PXLFMT_RGB565		= GCU_MAKE_PXLFMT(0x3, 2),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGB666	m2d_lib.h	/^	GCU_PXLFMT_RGB666		= GCU_MAKE_PXLFMT(0x4, 4),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGB666_PACKED	m2d_lib.h	/^	GCU_PXLFMT_RGB666_PACKED	= GCU_MAKE_PXLFMT(0x4, 3),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGB888	m2d_lib.h	/^	GCU_PXLFMT_RGB888		= GCU_MAKE_PXLFMT(0x6, 4),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGB888_PACKED	m2d_lib.h	/^	GCU_PXLFMT_RGB888_PACKED	= GCU_MAKE_PXLFMT(0x6, 3),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGBA16161616	m2d_lib.h	/^	GCU_PXLFMT_RGBA16161616		= GCU_MAKE_PXLFMT(0xb, 8),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGBA6666	m2d_lib.h	/^	GCU_PXLFMT_RGBA6666		= GCU_MAKE_PXLFMT(0x7, 4),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGBA6666_PACKED	m2d_lib.h	/^	GCU_PXLFMT_RGBA6666_PACKED	= GCU_MAKE_PXLFMT(0x7, 3),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGBA8888	m2d_lib.h	/^	GCU_PXLFMT_RGBA8888		= GCU_MAKE_PXLFMT(0x9, 4),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGBT5551	m2d_lib.h	/^	GCU_PXLFMT_RGBT5551		= GCU_MAKE_PXLFMT(0x2, 2),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGBT6661	m2d_lib.h	/^	GCU_PXLFMT_RGBT6661		= GCU_MAKE_PXLFMT(0x5, 4),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGBT6661_PACKED	m2d_lib.h	/^	GCU_PXLFMT_RGBT6661_PACKED	= GCU_MAKE_PXLFMT(0x5, 3),$/;"	e	enum:__anon3
+GCU_PXLFMT_RGBT8881	m2d_lib.h	/^	GCU_PXLFMT_RGBT8881		= GCU_MAKE_PXLFMT(0x8, 4),$/;"	e	enum:__anon3
+GCU_PXLFMT_STEP	m2d_lib.h	57;"	d
+GCU_REGS_BASE	m2d_drv.c	95;"	d	file:
+GCU_REGS_SIZE	m2d_drv.c	96;"	d	file:
+GCU_RINGBUF_SIZE	m2d_drv.h	32;"	d
+GCU_ROTATE_0	m2d_lib.h	/^	GCU_ROTATE_0		= 0,$/;"	e	enum:__anon7
+GCU_ROTATE_180	m2d_lib.h	/^	GCU_ROTATE_180		= 2,$/;"	e	enum:__anon7
+GCU_ROTATE_270	m2d_lib.h	/^	GCU_ROTATE_270		= 3,$/;"	e	enum:__anon7
+GCU_ROTATE_90	m2d_lib.h	/^	GCU_ROTATE_90		= 1,$/;"	e	enum:__anon7
+GCU_ROTATION	m2d_lib.h	/^} GCU_ROTATION;$/;"	t	typeref:enum:__anon7
+GCU_SCRATCHREG_NR	m2d_drv.h	33;"	d
+GCU_STATE	m2d_drv.c	/^} GCU_STATE;$/;"	t	typeref:enum:__anon9	file:
+GCU_STATE_EXEC	m2d_drv.c	/^	GCU_STATE_EXEC    = 2,$/;"	e	enum:__anon9	file:
+GCU_STATE_IDLE	m2d_drv.c	/^	GCU_STATE_IDLE    = 1,$/;"	e	enum:__anon9	file:
+GCU_STATE_UNKNOWN	m2d_drv.c	/^	GCU_STATE_UNKNOWN = 0,$/;"	e	enum:__anon9	file:
+GC_AALINE_IMM	m2d_lib.c	795;"	d	file:
+GC_AALINE_REG	m2d_lib.c	796;"	d	file:
+GC_ABLND	m2d_lib.c	798;"	d	file:
+GC_BBEND	m2d_lib.c	711;"	d	file:
+GC_BBST	m2d_lib.c	710;"	d	file:
+GC_BIAS	m2d_lib.c	800;"	d	file:
+GC_BUFFI	m2d_lib.c	712;"	d	file:
+GC_BUFFI_ADDR_DST0	m2d_drv.c	/^	GC_BUFFI_ADDR_DST0      = 0x8,$/;"	e	enum:__anon8	file:
+GC_BUFFI_ADDR_DST0	m2d_lib.c	/^	GC_BUFFI_ADDR_DST0      = 0x8,$/;"	e	enum:__anon1	file:
+GC_BUFFI_ADDR_DST1	m2d_drv.c	/^	GC_BUFFI_ADDR_DST1      = 0x9,$/;"	e	enum:__anon8	file:
+GC_BUFFI_ADDR_DST1	m2d_lib.c	/^	GC_BUFFI_ADDR_DST1      = 0x9,$/;"	e	enum:__anon1	file:
+GC_BUFFI_ADDR_DST2	m2d_drv.c	/^	GC_BUFFI_ADDR_DST2      = 0xa,$/;"	e	enum:__anon8	file:
+GC_BUFFI_ADDR_DST2	m2d_lib.c	/^	GC_BUFFI_ADDR_DST2      = 0xa,$/;"	e	enum:__anon1	file:
+GC_BUFFI_ADDR_SRC0	m2d_drv.c	/^	GC_BUFFI_ADDR_SRC0      = 0x0,$/;"	e	enum:__anon8	file:
+GC_BUFFI_ADDR_SRC0	m2d_lib.c	/^	GC_BUFFI_ADDR_SRC0      = 0x0,$/;"	e	enum:__anon1	file:
+GC_BUFFI_ADDR_SRC1	m2d_drv.c	/^	GC_BUFFI_ADDR_SRC1      = 0x1,$/;"	e	enum:__anon8	file:
+GC_BUFFI_ADDR_SRC1	m2d_lib.c	/^	GC_BUFFI_ADDR_SRC1      = 0x1,$/;"	e	enum:__anon1	file:
+GC_CFILL_IMM	m2d_lib.c	790;"	d	file:
+GC_CFILL_REG	m2d_lib.c	791;"	d	file:
+GC_CKBLT	m2d_lib.c	792;"	d	file:
+GC_DBFLIP	m2d_lib.c	715;"	d	file:
+GC_DECBLT	m2d_lib.c	804;"	d	file:
+GC_INT	m2d_lib.c	717;"	d	file:
+GC_LINE_IMM	m2d_lib.c	793;"	d	file:
+GC_LINE_REG	m2d_lib.c	794;"	d	file:
+GC_LREG	m2d_lib.c	713;"	d	file:
+GC_NOP	m2d_lib.c	714;"	d	file:
+GC_PATT	m2d_lib.c	803;"	d	file:
+GC_RASTER	m2d_lib.c	802;"	d	file:
+GC_ROT	m2d_lib.c	801;"	d	file:
+GC_SCALE	m2d_lib.c	799;"	d	file:
+GC_STRBLT	m2d_lib.c	797;"	d	file:
+GC_STREG	m2d_lib.c	716;"	d	file:
+GC_WAIT	m2d_lib.c	718;"	d	file:
+LOCAL_C_INCLUDES	Android.mk	/^LOCAL_C_INCLUDES := vendor\/marvell\/generic\/include vendor\/marvell\/littleton\/m2d$/;"	m
+LOCAL_MODULE	Android.mk	/^LOCAL_MODULE := m2dtest$/;"	m
+LOCAL_PATH	Android.mk	/^LOCAL_PATH:= $(call my-dir)$/;"	m
+LOCAL_SRC_FILES	Android.mk	/^LOCAL_SRC_FILES:= gcu.c  m2d_lib.c  m2dtest.c$/;"	m
+LOCAL_STATIC_LIBRARIES	Android.mk	/^LOCAL_STATIC_LIBRARIES :=libcutils libc$/;"	m
+M2DIO_FLUSH_MEM	m2d_drv.h	42;"	d
+M2DIO_GET_BUS_ADDR	m2d_drv.h	44;"	d
+M2DIO_RELEASE_MEM	m2d_drv.h	41;"	d
+M2DIO_REQUEST_MEM	m2d_drv.h	40;"	d
+M2DIO_SUBMIT	m2d_drv.h	37;"	d
+M2DIO_SYNC	m2d_drv.h	38;"	d
+M2D_ATTR_CACHEABLE	m2d_drv.h	55;"	d
+M2D_ATTR_COHERENT	m2d_drv.h	53;"	d
+M2D_ATTR_WRITECOMBINE	m2d_drv.h	54;"	d
+M2D_DEVICE_FILE	m2d_lib.c	62;"	d	file:
+M2D_FRAME_BUFFER	m2d_drv.h	49;"	d
+M2D_GRAPHICS_MEM	m2d_drv.h	48;"	d
+M2D_LIB_H	m2d_lib.h	27;"	d
+M2D_MEM_REQ_ATTR	m2d_drv.h	58;"	d
+M2D_MEM_REQ_TYPE	m2d_drv.h	57;"	d
+M2D_REGISTERS	m2d_drv.h	50;"	d
+M2D_RING_BUFFER	m2d_drv.h	51;"	d
+M2D_SUBMIT_MODE_NDELAY	m2d_drv.h	68;"	d
+M2D_SUBMIT_MODE_SYNC	m2d_drv.h	69;"	d
+MAX_CONTEXT_GMEM_SIZE	m2d_drv.h	30;"	d
+MAX_DEVICE_GMEM_SIZE	m2d_drv.h	29;"	d
+MOVE_ONLY	gcu.c	15;"	d	file:
+RESTORE_BUFFI	m2d_drv.c	603;"	d	file:
+ROTATE_DECIMATE_STRETCH	gcu.c	23;"	d	file:
+ROTATE_ONLY	gcu.c	20;"	d	file:
+ROTATE_STRETCH	gcu.c	21;"	d	file:
+SAVE_BUFFI	m2d_drv.c	576;"	d	file:
+SCRATCH_BUFF_SIZE	m2d_lib.c	115;"	d	file:
+SETUP_AALINE_IMM	m2d_lib.c	876;"	d	file:
+SETUP_AALINE_REG	m2d_lib.c	893;"	d	file:
+SETUP_ABLND	m2d_lib.c	926;"	d	file:
+SETUP_BBEND	m2d_lib.c	726;"	d	file:
+SETUP_BBST	m2d_lib.c	720;"	d	file:
+SETUP_BIAS	m2d_lib.c	913;"	d	file:
+SETUP_BUFFI	m2d_lib.c	731;"	d	file:
+SETUP_CFILL_IMM	m2d_lib.c	806;"	d	file:
+SETUP_CFILL_REG	m2d_lib.c	824;"	d	file:
+SETUP_CKBLT	m2d_lib.c	968;"	d	file:
+SETUP_DBFLIP	m2d_lib.c	766;"	d	file:
+SETUP_DECBLT	m2d_lib.c	955;"	d	file:
+SETUP_INT	m2d_lib.c	778;"	d	file:
+SETUP_LINE_CORE	m2d_lib.c	832;"	d	file:
+SETUP_LINE_IMM	m2d_lib.c	854;"	d	file:
+SETUP_LINE_REG	m2d_lib.c	870;"	d	file:
+SETUP_LREG_ADDR	m2d_lib.c	754;"	d	file:
+SETUP_LREG_IMM	m2d_lib.c	739;"	d	file:
+SETUP_NOP	m2d_lib.c	761;"	d	file:
+SETUP_PATT	m2d_lib.c	986;"	d	file:
+SETUP_RASTER	m2d_lib.c	977;"	d	file:
+SETUP_ROTATE	m2d_lib.c	995;"	d	file:
+SETUP_SCALE	m2d_lib.c	900;"	d	file:
+SETUP_STRBLT	m2d_lib.c	942;"	d	file:
+SETUP_STREG	m2d_lib.c	771;"	d	file:
+SETUP_WAIT	m2d_lib.c	783;"	d	file:
+SET_OP_REGION	m2d_lib.h	138;"	d
+SET_OP_REGION_DST	m2d_lib.h	155;"	d
+SET_OP_REGION_SRC0	m2d_lib.h	147;"	d
+STRETCH_ONLY	gcu.c	17;"	d	file:
+SYSOP_BUF	m2d_lib.c	152;"	d	file:
+TRUE	gcu.h	22;"	d
+UPDATE_CMDBUF	m2d_lib.c	652;"	d	file:
+USE_SRC_ALPHA	m2d_lib.h	230;"	d
+_M2D_H	m2d_drv.h	27;"	d
+__GCU_H__	gcu.h	8;"	d
+__m2d_follow_page	m2d_drv.c	/^static struct page *__m2d_follow_page(struct mm_struct *mm,$/;"	f	file:
+_m2d_load_buffi	m2d_lib.c	/^static inline int _m2d_load_buffi($/;"	f	file:
+_m2d_submit	m2d_lib.c	/^static int _m2d_submit(struct m2d_context *ctx, int submit_mode)$/;"	f	file:
+_m2d_submit_encoded	m2d_lib.c	/^int _m2d_submit_encoded(struct m2d_context *ctx, void *buf, size_t len)$/;"	f
+aaline_color_format	m2d_lib.c	/^	GCU_PIXEL_FORMAT aaline_color_format;$/;"	m	struct:m2d_context	file:
+aaline_color_value	m2d_lib.c	/^	GCU_COLOR_VALUE  aaline_color_value;$/;"	m	struct:m2d_context	file:
+aaline_mask_addr	m2d_lib.c	/^	unsigned char	*aaline_mask_addr;$/;"	m	struct:m2d_context	file:
+aaline_mask_bus_addr	m2d_lib.c	/^	unsigned long	aaline_mask_bus_addr;$/;"	m	struct:m2d_context	file:
+aaline_width	m2d_lib.c	/^	int		aaline_width;$/;"	m	struct:m2d_context	file:
+addr	m2d_lib.c	/^	void *		addr;     \/* address application can access *\/$/;"	m	struct:m2d_buff	file:
+alpha_set	m2d_drv.c	/^	unsigned long		alpha_set;$/;"	m	struct:m2d_context	file:
+base	m2d_drv.c	/^	unsigned long	base;$/;"	m	struct:gcu_buff_info	file:
+base	m2d_drv.h	/^	void *		base;$/;"	m	struct:m2d_submit_req
+bias_op	m2d_lib.c	/^	GCU_BIAS_OP	bias_op;$/;"	m	struct:m2d_context	file:
+blend_op	m2d_lib.c	/^	GCU_BLEND_OP	blend_op;$/;"	m	struct:m2d_context	file:
+buffer_mode	m2d_drv.c	/^	unsigned long		buffer_mode;$/;"	m	struct:m2d_context	file:
+bus_addr	m2d_lib.c	/^	uint32_t	bus_addr; \/* bus address *\/$/;"	m	struct:m2d_buff	file:
+cb_data	m2d_lib.c	/^	unsigned char	cb_data[CMDBUF_SIZE];$/;"	m	struct:m2d_cmdbuf	file:
+cb_len	m2d_lib.c	/^	unsigned long	cb_len;$/;"	m	struct:m2d_cmdbuf	file:
+cb_ptr	m2d_lib.c	/^	uint32_t *	cb_ptr;$/;"	m	struct:m2d_cmdbuf	file:
+ckblt_invert	m2d_lib.c	/^	int		ckblt_invert;$/;"	m	struct:m2d_context	file:
+clk	m2d_drv.c	/^	struct clk 		*clk;$/;"	m	struct:m2d_device	typeref:struct:m2d_device::clk	file:
+cmdbuf	m2d_lib.c	/^	struct m2d_cmdbuf	cmdbuf;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::m2d_cmdbuf	file:
+context	gcu.h	/^	struct m2d_context *context; 		$/;"	m	struct:gcu_info	typeref:struct:gcu_info::m2d_context
+context_changed	m2d_drv.c	/^static int context_changed = 0;$/;"	v	file:
+context_count	m2d_drv.c	/^	unsigned long		context_count;$/;"	m	struct:m2d_device	file:
+context_list	m2d_drv.c	/^	struct list_head	context_list;$/;"	m	struct:m2d_device	typeref:struct:m2d_device::list_head	file:
+context_lock	m2d_drv.c	/^	spinlock_t		context_lock;$/;"	m	struct:m2d_device	file:
+dev	m2d_drv.c	/^	struct device		*dev;$/;"	m	struct:m2d_device	typeref:struct:m2d_device::device	file:
+dev	m2d_drv.c	/^	struct m2d_device	*dev;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::m2d_device	file:
+dst_buf	gcu.h	/^	struct m2d_buff *dst_buf[3];$/;"	m	struct:gcu_info	typeref:struct:gcu_info::m2d_buff
+dst_height	gcu.h	/^	int dst_height[3];$/;"	m	struct:gcu_info
+dst_width	gcu.h	/^	int dst_width[3];$/;"	m	struct:gcu_info
+dstbuf	m2d_lib.c	/^	struct m2d_buff	*dstbuf;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::m2d_buff	file:
+dstbuf0	m2d_drv.c	/^	struct gcu_buff_info	dstbuf0;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::gcu_buff_info	file:
+dstbuf1	m2d_drv.c	/^	struct gcu_buff_info	dstbuf1;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::gcu_buff_info	file:
+dstbuf2	m2d_drv.c	/^	struct gcu_buff_info	dstbuf2;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::gcu_buff_info	file:
+dump_content	m2d_drv.c	/^static void dump_content(void *start, int len)$/;"	f	file:
+dump_content	m2d_drv.c	437;"	d	file:
+dump_gcu_buffi	m2d_drv.c	/^static void dump_gcu_buffi(volatile gcu_regs_t *gr, GCU_BUFFI_ADDR buff_addr)$/;"	f	file:
+dump_gcu_buffi	m2d_drv.c	436;"	d	file:
+dump_gcu_ring	m2d_drv.c	/^static void dump_gcu_ring(struct m2d_device *dev, volatile gcu_regs_t *gr)$/;"	f	file:
+dump_gcu_status	m2d_drv.c	/^static void dump_gcu_status(volatile gcu_regs_t *gr)$/;"	f	file:
+dump_gcu_status	m2d_drv.c	435;"	d	file:
+dump_page_table_entries	m2d_drv.c	/^static void dump_page_table_entries($/;"	f	file:
+dvfm_dev_idx	m2d_drv.c	/^static int dvfm_dev_idx;$/;"	v	file:
+dx0	m2d_lib.h	/^	int	dx0,  dy0;$/;"	m	struct:m2d_op_region
+dy0	m2d_lib.h	/^	int	dx0,  dy0;$/;"	m	struct:m2d_op_region
+err_iin	m2d_drv.c	/^	unsigned int		err_iin;$/;"	m	struct:m2d_context	file:
+err_iop	m2d_drv.c	/^	unsigned int		err_iop;$/;"	m	struct:m2d_context	file:
+err_ipf	m2d_drv.c	/^	unsigned int		err_ipf;$/;"	m	struct:m2d_context	file:
+fill_color_format	m2d_lib.c	/^	GCU_PIXEL_FORMAT fill_color_format;$/;"	m	struct:m2d_context	file:
+fill_color_value	m2d_lib.c	/^	GCU_COLOR_VALUE  fill_color_value;$/;"	m	struct:m2d_context	file:
+fill_pattern_h	m2d_lib.c	/^static inline int fill_pattern_h($/;"	f	file:
+fill_pattern_v	m2d_lib.c	/^static inline int fill_pattern_v($/;"	f	file:
+format	gcu.h	/^	int format;$/;"	m	struct:gcu_info
+format	m2d_drv.c	/^	unsigned long	format;$/;"	m	struct:gcu_buff_info	file:
+format	m2d_lib.c	/^	uint32_t	format;   \/* pixel format *\/$/;"	m	struct:m2d_buff	file:
+gcalphaset	m2d_drv.c	/^	uint32_t gcalphaset; \/* Default Alpha value Control Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcbbbr	m2d_drv.c	/^	uint32_t gcbbbr;   \/* Batch Buffer Base Address Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcbbexhr	m2d_drv.c	/^	uint32_t gcbbexhr; \/* Batch Buffer Execution Head Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcbbhr	m2d_drv.c	/^	uint32_t gcbbhr;   \/* Batch Buffer Head Register *\/$/;"	m	struct:gcu_regs_s	file:
+gccabaddr	m2d_drv.c	/^	uint32_t gccabaddr;$/;"	m	struct:gcu_regs_s	file:
+gccr	m2d_drv.c	/^	uint32_t gccr;	     \/* Configuration Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd0br	m2d_drv.c	/^	uint32_t gcd0br;  \/* Destination 0 Base Address Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd0pf	m2d_drv.c	/^	uint32_t gcd0pf;  \/* Destination 0 Pixel Type Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd0stp	m2d_drv.c	/^	uint32_t gcd0stp; \/* Destination 0 Step Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd0str	m2d_drv.c	/^	uint32_t gcd0str; \/* Destination 0 Stride Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd1br	m2d_drv.c	/^	uint32_t gcd1br;  \/* Destination 1 Base Address Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd1pf	m2d_drv.c	/^	uint32_t gcd1pf;  \/* Destination 1 Pixel Type Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd1stp	m2d_drv.c	/^	uint32_t gcd1stp; \/* Destination 1 Step Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd1str	m2d_drv.c	/^	uint32_t gcd1str; \/* Destination 1 Stride Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd2br	m2d_drv.c	/^	uint32_t gcd2br;  \/* Destination 2 Base Address Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd2pf	m2d_drv.c	/^	uint32_t gcd2pf;  \/* Destination 2 Pixel Type Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd2stp	m2d_drv.c	/^	uint32_t gcd2stp; \/* Destination 2 Step Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcd2str	m2d_drv.c	/^	uint32_t gcd2str; \/* Destination 2 Stride Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcflags	m2d_drv.c	/^	uint32_t gcflags;    \/* ALU Ooperations Flags Status Control Register *\/$/;"	m	struct:gcu_regs_s	file:
+gciecr	m2d_drv.c	/^	uint32_t gciecr;     \/* Interrupt Enable Control Register *\/$/;"	m	struct:gcu_regs_s	file:
+gciscr	m2d_drv.c	/^	uint32_t gciscr;     \/* Interrupt Status Control Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcmabaddr	m2d_drv.c	/^	uint32_t gcmabaddr;$/;"	m	struct:gcu_regs_s	file:
+gcnopid	m2d_drv.c	/^	uint32_t gcnopid;    \/* NOP ID From Instruction Stream Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcrbbr	m2d_drv.c	/^	uint32_t gcrbbr;   \/* Ring Buffer Base Address Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcrbexhr	m2d_drv.c	/^	uint32_t gcrbexhr; \/* Ring Buffer Execution Head Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcrbhr	m2d_drv.c	/^	uint32_t gcrbhr;   \/* Ring Buffer Head Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcrblr	m2d_drv.c	/^	uint32_t gcrblr;   \/* Ring Buffer Length Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcrbtr	m2d_drv.c	/^	uint32_t gcrbtr;   \/* Ring Buffer Tail Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcs0br	m2d_drv.c	/^	uint32_t gcs0br;	\/* Source 0 Base Address Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcs0pf	m2d_drv.c	/^	uint32_t gcs0pf;	\/* Source 0 Pixel Type Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcs0stp	m2d_drv.c	/^	uint32_t gcs0stp;	\/* Source 0 Step Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcs0str	m2d_drv.c	/^	uint32_t gcs0str;	\/* Source 0 Stride Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcs1br	m2d_drv.c	/^	uint32_t gcs1br;	\/* Source 1 Base Address Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcs1pf	m2d_drv.c	/^	uint32_t gcs1pf;	\/* Source 1 Pixel Type Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcs1stp	m2d_drv.c	/^	uint32_t gcs1stp;	\/* Source 1 Step Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcs1str	m2d_drv.c	/^	uint32_t gcs1str;	\/* Source 1 Stride Size Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc0wd0	m2d_drv.c	/^	uint32_t gcsc0wd0; \/* Pixel ALU Scratch Register 0 Word 0 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc0wd1	m2d_drv.c	/^	uint32_t gcsc0wd1; \/* Pixel ALU Scratch Register 0 Word 1 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc1wd0	m2d_drv.c	/^	uint32_t gcsc1wd0; \/* Pixel ALU Scratch Register 1 Word 0 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc1wd1	m2d_drv.c	/^	uint32_t gcsc1wd1; \/* Pixel ALU Scratch Register 1 Word 1 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc2wd0	m2d_drv.c	/^	uint32_t gcsc2wd0; \/* Pixel ALU Scratch Register 2 Word 0 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc2wd1	m2d_drv.c	/^	uint32_t gcsc2wd1; \/* Pixel ALU Scratch Register 2 Word 1 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc3wd0	m2d_drv.c	/^	uint32_t gcsc3wd0; \/* Pixel ALU Scratch Register 3 Word 0 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc3wd1	m2d_drv.c	/^	uint32_t gcsc3wd1; \/* Pixel ALU Scratch Register 3 Word 1 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc4wd0	m2d_drv.c	/^	uint32_t gcsc4wd0; \/* Pixel ALU Scratch Register 4 Word 0 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc4wd1	m2d_drv.c	/^	uint32_t gcsc4wd1; \/* Pixel ALU Scratch Register 5 Word 1 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc5wd0	m2d_drv.c	/^	uint32_t gcsc5wd0; \/* Pixel ALU Scratch Register 5 Word 0 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc5wd1	m2d_drv.c	/^	uint32_t gcsc5wd1; \/* Pixel ALU Scratch Register 5 Word 1 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc6wd0	m2d_drv.c	/^	uint32_t gcsc6wd0; \/* Pixel ALU Scratch Register 6 Word 0 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc6wd1	m2d_drv.c	/^	uint32_t gcsc6wd1; \/* Pixel ALU Scratch Register 6 Word 1 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc7wd0	m2d_drv.c	/^	uint32_t gcsc7wd0; \/* Pixel ALU Scratch Register 7 Word 0 *\/$/;"	m	struct:gcu_regs_s	file:
+gcsc7wd1	m2d_drv.c	/^	uint32_t gcsc7wd1; \/* Pixel ALU Scratch Register 7 Word 1 *\/$/;"	m	struct:gcu_regs_s	file:
+gctabaddr	m2d_drv.c	/^	uint32_t gctabaddr;$/;"	m	struct:gcu_regs_s	file:
+gctset	m2d_drv.c	/^	uint32_t gctset;     \/* Default Transparecy Value Control Register *\/$/;"	m	struct:gcu_regs_s	file:
+gcu_buff_info	m2d_drv.c	/^struct gcu_buff_info {$/;"	s	file:
+gcu_clock_counter	m2d_drv.c	/^static unsigned int gcu_clock_counter;$/;"	v	file:
+gcu_close	gcu.c	/^int gcu_close(struct gcu_info *gcu)$/;"	f
+gcu_create_op	gcu.c	/^int gcu_create_op(struct m2d_op_region opr[3][2], int* src_width, int* src_height, int* dst_width, int* dst_height, int rotate)$/;"	f
+gcu_enable	gcu.h	/^	int gcu_enable;$/;"	m	struct:gcu_info
+gcu_free_dst_buffer	gcu.c	/^static int gcu_free_dst_buffer(struct gcu_info *gcu)$/;"	f	file:
+gcu_free_mid_buffer	gcu.c	/^static int gcu_free_mid_buffer(struct gcu_info *gcu)$/;"	f	file:
+gcu_free_rot_buffer	gcu.c	/^int gcu_free_rot_buffer(struct gcu_info *gcu)$/;"	f
+gcu_free_src_buffer	gcu.c	/^static int gcu_free_src_buffer(struct gcu_info *gcu)$/;"	f	file:
+gcu_get_rot_degree	gcu.c	/^int gcu_get_rot_degree(struct gcu_info *gcu)$/;"	f
+gcu_get_use_srcbuf	gcu.c	/^int gcu_get_use_srcbuf(struct gcu_info *gcu)$/;"	f
+gcu_info	gcu.h	/^struct gcu_info {$/;"	s
+gcu_lock	m2d_drv.c	/^static spinlock_t gcu_lock;$/;"	v	file:
+gcu_new_dst_buffer	gcu.c	/^int gcu_new_dst_buffer(struct gcu_info *gcu, struct v_frame *dst)$/;"	f
+gcu_new_mid_buffer	gcu.c	/^static int gcu_new_mid_buffer(struct gcu_info *gcu)$/;"	f	file:
+gcu_new_rot_buffer	gcu.c	/^static int gcu_new_rot_buffer(struct gcu_info *gcu, int* width, int* height)$/;"	f	file:
+gcu_new_src_buffer	gcu.c	/^static int gcu_new_src_buffer(struct gcu_info *gcu, struct v_frame *src)$/;"	f	file:
+gcu_open	gcu.c	/^int gcu_open(struct gcu_info *gcu, struct v_frame *src)$/;"	f
+gcu_parse	gcu.c	/^int gcu_parse(struct gcu_info *gcu, struct v_frame *src, struct v_frame *dst)$/;"	f
+gcu_process	gcu.c	/^int gcu_process(struct gcu_info *gcu, struct v_frame *src, struct v_frame *dst)$/;"	f
+gcu_regs	m2d_drv.c	/^	gcu_regs_t		*gcu_regs;$/;"	m	struct:m2d_device	file:
+gcu_regs_base	m2d_drv.c	/^	unsigned long		gcu_regs_base;$/;"	m	struct:m2d_device	file:
+gcu_regs_len	m2d_drv.c	/^	unsigned long		gcu_regs_len;$/;"	m	struct:m2d_device	file:
+gcu_regs_s	m2d_drv.c	/^typedef struct gcu_regs_s {$/;"	s	file:
+gcu_regs_t	m2d_drv.c	/^} gcu_regs_t;$/;"	t	typeref:struct:gcu_regs_s	file:
+gcu_set_rot_degree	gcu.c	/^void gcu_set_rot_degree(struct gcu_info *gcu, int deg)$/;"	f
+gcu_set_use_srcbuf	gcu.c	/^void gcu_set_use_srcbuf(struct gcu_info *gcu, int val)$/;"	f
+gcu_sync	gcu.c	/^void gcu_sync(struct gcu_info *gcu)$/;"	f
+generate_line_pattern	m2d_lib.c	/^static inline void *generate_line_pattern($/;"	f	file:
+gmem_count	m2d_drv.c	/^	atomic_t		gmem_count;$/;"	m	struct:m2d_gmem	file:
+gmem_dev	m2d_drv.c	/^	struct m2d_device	*gmem_dev;$/;"	m	struct:m2d_gmem	typeref:struct:m2d_gmem::m2d_device	file:
+gmem_list	m2d_drv.c	/^	struct list_head	gmem_list;$/;"	m	struct:m2d_gmem	typeref:struct:m2d_gmem::list_head	file:
+gmem_pages	m2d_drv.c	/^	struct page		*gmem_pages;$/;"	m	struct:m2d_gmem	typeref:struct:m2d_gmem::page	file:
+gmem_phys_addr	m2d_drv.c	/^	unsigned long		gmem_phys_addr;$/;"	m	struct:m2d_gmem	file:
+gmem_size	m2d_drv.c	/^	size_t			gmem_size;$/;"	m	struct:m2d_gmem	file:
+gmem_virt_addr	m2d_drv.c	/^	unsigned long		gmem_virt_addr;$/;"	m	struct:m2d_gmem	file:
+height	gcu.h	/^    	int height;$/;"	m	struct:v_frame
+height	m2d_lib.c	/^	int		height;   \/* this buffer represent *\/$/;"	m	struct:m2d_buff	file:
+height	m2d_lib.h	/^	int	width, height;$/;"	m	struct:m2d_op_region
+hsiogcu_clk	m2d_drv.c	/^	struct clk		*hsiogcu_clk;$/;"	m	struct:m2d_device	typeref:struct:m2d_device::clk	file:
+immid	m2d_drv.c	/^	u32 immid;$/;"	m	struct:m2d_device	file:
+last_context	m2d_drv.c	/^	struct m2d_context	*last_context;$/;"	m	struct:m2d_device	typeref:struct:m2d_device::m2d_context	file:
+len	m2d_drv.h	/^	size_t		len;$/;"	m	struct:m2d_submit_req
+length	gcu.h	/^    	size_t  length[3];$/;"	m	struct:v_frame
+likely	m2d_lib.c	55;"	d	file:
+likely	m2d_lib.c	58;"	d	file:
+line_color_format	m2d_lib.c	/^	GCU_PIXEL_FORMAT line_color_format;$/;"	m	struct:m2d_context	file:
+line_color_value	m2d_lib.c	/^	GCU_COLOR_VALUE  line_color_value;$/;"	m	struct:m2d_context	file:
+line_width	m2d_lib.c	/^	int		line_width;$/;"	m	struct:m2d_context	file:
+list	m2d_drv.c	/^	struct list_head	list;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::list_head	file:
+m2d_alloc_buffer	m2d_lib.c	/^struct m2d_buff *m2d_alloc_buffer($/;"	f
+m2d_alloc_gmem	m2d_drv.c	/^static struct m2d_gmem *m2d_alloc_gmem(struct m2d_context *ctx, size_t rsize)$/;"	f	file:
+m2d_alpha_blend	m2d_lib.c	/^int m2d_alpha_blend($/;"	f
+m2d_alpha_blend_single	m2d_lib.c	/^int m2d_alpha_blend_single($/;"	f
+m2d_append	m2d_drv.c	/^static int m2d_append(struct m2d_device *dev, void *usrbuf, size_t len)$/;"	f	file:
+m2d_bias_blt	m2d_lib.c	/^int m2d_bias_blt($/;"	f
+m2d_buff	m2d_lib.c	/^struct m2d_buff {$/;"	s	file:
+m2d_buff_addr	m2d_lib.c	/^void * m2d_buff_addr(struct m2d_buff *buf)$/;"	f
+m2d_buff_size	m2d_lib.c	/^size_t m2d_buff_size(struct m2d_buff *buf)$/;"	f
+m2d_chroma_key_blt	m2d_lib.c	/^int m2d_chroma_key_blt($/;"	f
+m2d_cmdbuf	m2d_lib.c	/^struct m2d_cmdbuf {$/;"	s	file:
+m2d_color_fill	m2d_lib.c	/^int m2d_color_fill($/;"	f
+m2d_color_fill_imm	m2d_lib.c	/^int m2d_color_fill_imm($/;"	f
+m2d_context	m2d_drv.c	/^struct m2d_context {$/;"	s	file:
+m2d_context	m2d_lib.c	/^struct m2d_context {$/;"	s	file:
+m2d_count	m2d_lib.c	/^static int	m2d_count = 0;	\/* It's used to calculate how many times 2d library is opened. *\/$/;"	v	file:
+m2d_create_buffer	m2d_lib.c	/^struct m2d_buff *m2d_create_buffer($/;"	f
+m2d_create_context	m2d_drv.c	/^static struct m2d_context *m2d_create_context(struct m2d_device *dev)$/;"	f	file:
+m2d_create_context	m2d_lib.c	/^struct m2d_context *m2d_create_context(void)$/;"	f
+m2d_debug	m2d_drv.c	74;"	d	file:
+m2d_decimate_blt	m2d_lib.c	/^int m2d_decimate_blt($/;"	f
+m2d_destroy_buffer	m2d_lib.c	/^void m2d_destroy_buffer(struct m2d_context *ctx, struct m2d_buff *buff)$/;"	f
+m2d_dev	m2d_drv.c	/^static struct m2d_device m2d_dev;$/;"	v	typeref:struct:m2d_device	file:
+m2d_device	m2d_drv.c	/^struct m2d_device {$/;"	s	file:
+m2d_draw_aaline	m2d_lib.c	/^int m2d_draw_aaline($/;"	f
+m2d_draw_aaline_imm	m2d_lib.c	/^int m2d_draw_aaline_imm($/;"	f
+m2d_draw_line	m2d_lib.c	/^int m2d_draw_line($/;"	f
+m2d_draw_line_core_x	m2d_lib.c	/^static inline void m2d_draw_line_core_x($/;"	f	file:
+m2d_draw_line_core_y	m2d_lib.c	/^static inline void m2d_draw_line_core_y($/;"	f	file:
+m2d_draw_line_imm	m2d_lib.c	/^int m2d_draw_line_imm($/;"	f
+m2d_draw_line_soft	m2d_lib.c	/^int m2d_draw_line_soft($/;"	f
+m2d_driver	m2d_drv.c	/^static struct platform_driver m2d_driver = {$/;"	v	typeref:struct:platform_driver	file:
+m2d_exit	m2d_drv.c	/^module_exit(m2d_exit);$/;"	v
+m2d_exit	m2d_drv.c	/^static void __exit m2d_exit(void)$/;"	f	file:
+m2d_fd	m2d_lib.c	/^	int		m2d_fd;$/;"	m	struct:m2d_context	file:
+m2d_fill_nop	m2d_drv.c	/^static inline void m2d_fill_nop(void *addr, int length)$/;"	f	file:
+m2d_flush_gmem	m2d_drv.c	/^static inline void m2d_flush_gmem(struct m2d_gmem *gmem)$/;"	f	file:
+m2d_fops	m2d_drv.c	/^static struct file_operations m2d_fops = {$/;"	v	typeref:struct:file_operations	file:
+m2d_free_buffer	m2d_lib.c	/^void m2d_free_buffer(struct m2d_context *ctx, struct m2d_buff *buff)$/;"	f
+m2d_free_context	m2d_drv.c	/^static void m2d_free_context(struct m2d_context *ctx)$/;"	f	file:
+m2d_free_context	m2d_lib.c	/^void m2d_free_context(struct m2d_context *ctx)$/;"	f
+m2d_free_device	m2d_drv.c	/^static void m2d_free_device(struct m2d_device *dev)$/;"	f	file:
+m2d_free_gmem	m2d_drv.c	/^static void m2d_free_gmem(struct m2d_context *ctx, struct m2d_gmem *gmem)$/;"	f	file:
+m2d_free_proc	m2d_drv.c	/^static void m2d_free_proc(void)$/;"	f	file:
+m2d_fsync	m2d_drv.c	/^static int m2d_fsync(struct file *file, struct dentry *dentry, int datasync)$/;"	f	file:
+m2d_func	m2d_drv.c	75;"	d	file:
+m2d_gcu_irq	m2d_drv.c	/^static int m2d_gcu_irq(int irq, void *dev_id)$/;"	f	file:
+m2d_get_bias_op	m2d_lib.c	/^GCU_BIAS_OP m2d_get_bias_op(struct m2d_context *ctx)$/;"	f
+m2d_get_blend_op	m2d_lib.c	/^GCU_BLEND_OP m2d_get_blend_op(struct m2d_context *ctx)$/;"	f
+m2d_get_ckblt_invert	m2d_lib.c	/^int m2d_get_ckblt_invert(struct m2d_context *ctx)$/;"	f
+m2d_get_primary	m2d_lib.c	/^struct m2d_buff *m2d_get_primary(void)$/;"	f
+m2d_gmem	m2d_drv.c	/^struct m2d_gmem {$/;"	s	file:
+m2d_id	m2d_lib.c	/^static AppID	m2d_id;		\/* It's used to save the id number. *\/$/;"	v	file:
+m2d_init	m2d_drv.c	/^module_init(m2d_init);$/;"	v
+m2d_init	m2d_drv.c	/^static int __devinit m2d_init(void)$/;"	f	file:
+m2d_init_device	m2d_drv.c	/^static int m2d_init_device(struct m2d_device *dev)$/;"	f	file:
+m2d_init_proc	m2d_drv.c	/^static void m2d_init_proc(void)$/;"	f	file:
+m2d_interrupt_eeob	m2d_drv.c	/^static int m2d_interrupt_eeob(struct m2d_device *dev, volatile gcu_regs_t *gr)$/;"	f	file:
+m2d_interrupt_err	m2d_drv.c	/^static int m2d_interrupt_err(struct m2d_device *dev, volatile gcu_regs_t *gr)$/;"	f	file:
+m2d_ioctl	m2d_drv.c	/^static int m2d_ioctl(struct inode *inode, struct file *file,$/;"	f	file:
+m2d_kick	m2d_drv.c	/^static int m2d_kick(struct m2d_device *dev, int sync)$/;"	f	file:
+m2d_load_reg	m2d_lib.c	/^int m2d_load_reg($/;"	f
+m2d_major	m2d_drv.c	/^static int m2d_major = 253;$/;"	v	file:
+m2d_mem_map	m2d_drv.c	/^struct m2d_mem_map {$/;"	s	file:
+m2d_mem_req	m2d_drv.h	/^struct m2d_mem_req {$/;"	s
+m2d_miscdev	m2d_drv.c	/^static struct miscdevice m2d_miscdev = {$/;"	v	typeref:struct:miscdevice	file:
+m2d_mmap	m2d_drv.c	/^static int m2d_mmap(struct file *file, struct vm_area_struct *vma)$/;"	f	file:
+m2d_nop	m2d_lib.c	/^int m2d_nop(struct m2d_context *ctx, int nop_id)$/;"	f
+m2d_op_region	m2d_lib.h	/^struct m2d_op_region {$/;"	s
+m2d_open	m2d_drv.c	/^static int m2d_open(struct inode *inode, struct file *file)$/;"	f	file:
+m2d_pattern_copy_mode1	m2d_lib.c	/^int m2d_pattern_copy_mode1($/;"	f
+m2d_pattern_copy_mode2	m2d_lib.c	/^int m2d_pattern_copy_mode2($/;"	f
+m2d_probe	m2d_drv.c	/^static int m2d_probe(struct platform_device *pdev)$/;"	f	file:
+m2d_raster_blt	m2d_lib.c	/^int m2d_raster_blt($/;"	f
+m2d_read_proc	m2d_drv.c	/^static int m2d_read_proc(char *buf, char **start, off_t off,$/;"	f	file:
+m2d_release	m2d_drv.c	/^static int m2d_release(struct inode *inode, struct file *file)$/;"	f	file:
+m2d_release_mem	m2d_drv.c	/^static void m2d_release_mem(struct m2d_context *ctx, unsigned long mmap_addr)$/;"	f	file:
+m2d_remove	m2d_drv.c	/^static int m2d_remove(struct platform_device *pdev)$/;"	f	file:
+m2d_request_mem	m2d_drv.c	/^static int m2d_request_mem($/;"	f	file:
+m2d_reset_device	m2d_drv.c	/^static void m2d_reset_device(struct m2d_device *dev)$/;"	f	file:
+m2d_restore_context	m2d_drv.c	/^static inline void m2d_restore_context($/;"	f	file:
+m2d_resume	m2d_drv.c	/^static int m2d_resume(struct platform_device *pdev)$/;"	f	file:
+m2d_rotate_blt	m2d_lib.c	/^int m2d_rotate_blt($/;"	f
+m2d_save_context	m2d_drv.c	/^static inline void m2d_save_context($/;"	f	file:
+m2d_scale_blt	m2d_lib.c	/^int m2d_scale_blt($/;"	f
+m2d_set_aaline_color	m2d_lib.c	/^int m2d_set_aaline_color($/;"	f
+m2d_set_aaline_mask	m2d_lib.c	/^void m2d_set_aaline_mask(struct m2d_context *ctx, uint8_t mask[8])$/;"	f
+m2d_set_aaline_width	m2d_lib.c	/^void m2d_set_aaline_width(struct m2d_context *ctx, int width)$/;"	f
+m2d_set_bias_op	m2d_lib.c	/^void m2d_set_bias_op(struct m2d_context *ctx, GCU_BIAS_OP op)$/;"	f
+m2d_set_blend_op	m2d_lib.c	/^void m2d_set_blend_op(struct m2d_context *ctx, GCU_BLEND_OP op)$/;"	f
+m2d_set_ckblt_invert	m2d_lib.c	/^void m2d_set_ckblt_invert(struct m2d_context *ctx, int invert)$/;"	f
+m2d_set_dstbuf0	m2d_lib.c	/^int m2d_set_dstbuf0(struct m2d_context *ctx, struct m2d_buff *buffi)$/;"	f
+m2d_set_dstbuf1	m2d_lib.c	/^int m2d_set_dstbuf1(struct m2d_context *ctx, struct m2d_buff *buffi)$/;"	f
+m2d_set_dstbuf2	m2d_lib.c	/^int m2d_set_dstbuf2(struct m2d_context *ctx, struct m2d_buff *buffi)$/;"	f
+m2d_set_fill_color	m2d_lib.c	/^int m2d_set_fill_color($/;"	f
+m2d_set_line_color	m2d_lib.c	/^int m2d_set_line_color($/;"	f
+m2d_set_line_width	m2d_lib.c	/^void m2d_set_line_width(struct m2d_context *ctx, int width)$/;"	f
+m2d_set_srcbuf0	m2d_lib.c	/^int m2d_set_srcbuf0(struct m2d_context *ctx, struct m2d_buff *buffi)$/;"	f
+m2d_set_srcbuf1	m2d_lib.c	/^int m2d_set_srcbuf1(struct m2d_context *ctx, struct m2d_buff *buffi)$/;"	f
+m2d_stretch_blt	m2d_lib.c	/^int m2d_stretch_blt($/;"	f
+m2d_sub_buffer	m2d_lib.c	/^struct m2d_buff* m2d_sub_buffer(struct m2d_buff *buff,$/;"	f
+m2d_submit	m2d_drv.c	/^static int m2d_submit(struct m2d_context *ctx, struct m2d_submit_req *req)$/;"	f	file:
+m2d_submit	m2d_lib.c	/^int m2d_submit(struct m2d_context *ctx)$/;"	f
+m2d_submit_nodelay	m2d_lib.c	/^int m2d_submit_nodelay(struct m2d_context *ctx)$/;"	f
+m2d_submit_req	m2d_drv.h	/^struct m2d_submit_req {$/;"	s
+m2d_suspend	m2d_drv.c	/^static int m2d_suspend(struct platform_device *pdev, pm_message_t state)$/;"	f	file:
+m2d_switch_context	m2d_drv.c	/^static void m2d_switch_context(struct m2d_context *ctx)$/;"	f	file:
+m2d_sync	m2d_drv.c	/^static int m2d_sync(struct m2d_context *ctx)$/;"	f	file:
+m2d_sync	m2d_lib.c	/^int m2d_sync(struct m2d_context *ctx)$/;"	f
+m2d_wait_for_eeob	m2d_drv.c	/^static int m2d_wait_for_eeob(struct m2d_device *dev)$/;"	f	file:
+m2d_warn	m2d_drv.c	73;"	d	file:
+main	m2dtest.c	/^int main(int argc, char* argv[])$/;"	f
+mem_map	m2d_drv.c	/^	struct m2d_mem_map *	mem_map;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::m2d_mem_map	file:
+mem_map_list	m2d_drv.c	/^	struct list_head	mem_map_list;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::list_head	file:
+mid_buf	gcu.h	/^	struct m2d_buff *mid_buf[3];			\/*use for temp buffer*\/$/;"	m	struct:gcu_info	typeref:struct:gcu_info::m2d_buff
+mid_buf_phy	gcu.h	/^	void * mid_buf_phy[3];$/;"	m	struct:gcu_info
+mid_height	gcu.h	/^	int mid_height[3];$/;"	m	struct:gcu_info
+mid_opr	gcu.h	/^	struct m2d_op_region mid_opr[3][2];$/;"	m	struct:gcu_info	typeref:struct:gcu_info::m2d_op_region
+mid_width	gcu.h	/^	int mid_width[3];$/;"	m	struct:gcu_info
+mmap_addr	m2d_drv.c	/^	unsigned long		mmap_addr;$/;"	m	struct:m2d_mem_map	file:
+mmap_addr	m2d_drv.h	/^	unsigned long	mmap_addr;$/;"	m	struct:m2d_mem_req
+mmap_attr_desc	m2d_drv.c	/^static char *mmap_attr_desc[] = {"coherent", "writecombine", "cacheable"};$/;"	v	file:
+mmap_gmem	m2d_drv.c	/^	struct m2d_gmem		*mmap_gmem;$/;"	m	struct:m2d_mem_map	typeref:struct:m2d_mem_map::m2d_gmem	file:
+mmap_list	m2d_drv.c	/^	struct list_head	mmap_list;$/;"	m	struct:m2d_mem_map	typeref:struct:m2d_mem_map::list_head	file:
+mmap_pgoff	m2d_drv.c	/^	unsigned long		mmap_pgoff;$/;"	m	struct:m2d_mem_map	file:
+mmap_size	m2d_drv.c	/^	unsigned long		mmap_size;$/;"	m	struct:m2d_mem_map	file:
+mmap_size	m2d_drv.h	/^	unsigned long	mmap_size;$/;"	m	struct:m2d_mem_req
+mmap_type	m2d_drv.c	/^	unsigned long		mmap_type;$/;"	m	struct:m2d_mem_map	file:
+mmap_type_desc	m2d_drv.c	/^static char *mmap_type_desc[] = {"GMEM", "FBUF", "REGS", "RBUF"};$/;"	v	file:
+mode	m2d_drv.h	/^	unsigned int	mode;$/;"	m	struct:m2d_submit_req
+opr	gcu.h	/^	struct m2d_op_region opr[3][2];$/;"	m	struct:gcu_info	typeref:struct:gcu_info::m2d_op_region
+parent	m2d_lib.c	/^	struct m2d_buff *parent;  \/* != NULL if this is a sub buffer *\/$/;"	m	struct:m2d_buff	typeref:struct:m2d_buff::m2d_buff	file:
+phys_addr	m2d_drv.h	/^	unsigned long	phys_addr;$/;"	m	struct:m2d_mem_req
+pic_size	gcu.h	/^	int pic_size;$/;"	m	struct:gcu_info
+pr_debug	m2d_lib.c	69;"	d	file:
+pr_debug	m2d_lib.c	71;"	d	file:
+primary_fb_base	m2d_drv.c	/^	unsigned long		primary_fb_base;$/;"	m	struct:m2d_device	file:
+primary_fb_len	m2d_drv.c	/^	unsigned long		primary_fb_len;$/;"	m	struct:m2d_device	file:
+req_size	m2d_drv.h	/^	unsigned int	req_size;$/;"	m	struct:m2d_mem_req
+req_type	m2d_drv.h	/^	unsigned int	req_type;$/;"	m	struct:m2d_mem_req
+res0	m2d_drv.c	/^	uint32_t res0[1];$/;"	m	struct:gcu_regs_s	file:
+res1	m2d_drv.c	/^	uint32_t res1[3];$/;"	m	struct:gcu_regs_s	file:
+res2	m2d_drv.c	/^	uint32_t res2[5];$/;"	m	struct:gcu_regs_s	file:
+res3	m2d_drv.c	/^	uint32_t res3[20];$/;"	m	struct:gcu_regs_s	file:
+res4	m2d_drv.c	/^	uint32_t res4[24];$/;"	m	struct:gcu_regs_s	file:
+res5	m2d_drv.c	/^	uint32_t res5[16];$/;"	m	struct:gcu_regs_s	file:
+resize_times	gcu.h	/^	int resize_times;$/;"	m	struct:gcu_info
+resize_times_2	gcu.h	/^	int resize_times_2;$/;"	m	struct:gcu_info
+resizetype	gcu.h	/^	int resizetype;	$/;"	m	struct:gcu_info
+ring_addr	m2d_drv.c	/^	unsigned long		*ring_addr;$/;"	m	struct:m2d_device	file:
+ring_addr_dma	m2d_drv.c	/^	unsigned long		ring_addr_dma;$/;"	m	struct:m2d_device	file:
+ring_size	m2d_drv.c	/^	unsigned long		ring_size;$/;"	m	struct:m2d_device	file:
+ring_tail_dma	m2d_drv.c	/^	unsigned long		ring_tail_dma;$/;"	m	struct:m2d_device	file:
+rot_buf	gcu.h	/^	struct m2d_buff *rot_buf[3];			\/*use for rotate buffer*\/$/;"	m	struct:gcu_info	typeref:struct:gcu_info::m2d_buff
+rot_buf_phy	gcu.h	/^	void * rot_buf_phy[3];$/;"	m	struct:gcu_info
+rot_opr	gcu.h	/^	struct m2d_op_region rot_opr[3][2];$/;"	m	struct:gcu_info	typeref:struct:gcu_info::m2d_op_region
+rotate_degree	gcu.h	/^	int rotate_degree;$/;"	m	struct:gcu_info
+rotate_times	gcu.h	/^	int rotate_times;$/;"	m	struct:gcu_info
+s0x0	m2d_lib.h	/^	int	s0x0, s0y0;$/;"	m	struct:m2d_op_region
+s0y0	m2d_lib.h	/^	int	s0x0, s0y0;$/;"	m	struct:m2d_op_region
+s1x0	m2d_lib.h	/^	int	s1x0, s1y0;$/;"	m	struct:m2d_op_region
+s1y0	m2d_lib.h	/^	int	s1x0, s1y0;$/;"	m	struct:m2d_op_region
+scratch_buff	m2d_lib.c	/^	struct m2d_buff *scratch_buff;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::m2d_buff	file:
+scratch_reg_color	m2d_lib.c	/^	GCU_COLOR_VALUE  scratch_reg_color[8];$/;"	m	struct:m2d_context	file:
+scratch_reg_format	m2d_lib.c	/^	GCU_PIXEL_FORMAT scratch_reg_format[8];$/;"	m	struct:m2d_context	file:
+set_dvfm_constraint	m2d_drv.c	/^static void set_dvfm_constraint(void) {}$/;"	f	file:
+set_dvfm_constraint	m2d_drv.c	/^static void set_dvfm_constraint(void)$/;"	f	file:
+size	m2d_lib.c	/^	size_t		size;	  \/* size of the buffer *\/$/;"	m	struct:m2d_buff	file:
+src_buf	gcu.h	/^	struct m2d_buff *src_buf[3];$/;"	m	struct:gcu_info	typeref:struct:gcu_info::m2d_buff
+src_height	gcu.h	/^	int src_height[3];$/;"	m	struct:gcu_info
+src_width	gcu.h	/^	int src_width[3];$/;"	m	struct:gcu_info
+srcbuf0	m2d_drv.c	/^	struct gcu_buff_info	srcbuf0;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::gcu_buff_info	file:
+srcbuf0	m2d_lib.c	/^	struct m2d_buff *srcbuf0;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::m2d_buff	file:
+srcbuf1	m2d_drv.c	/^	struct gcu_buff_info	srcbuf1;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::gcu_buff_info	file:
+srcbuf1	m2d_lib.c	/^	struct m2d_buff *srcbuf1;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::m2d_buff	file:
+start	gcu.h	/^    	void *  start[3];$/;"	m	struct:v_frame
+step	m2d_drv.c	/^	unsigned long	step;$/;"	m	struct:gcu_buff_info	file:
+step	m2d_lib.c	/^	uint32_t	step;     \/* size of a pixel *\/	$/;"	m	struct:m2d_buff	file:
+stride	m2d_drv.c	/^	unsigned long	stride;$/;"	m	struct:gcu_buff_info	file:
+stride	m2d_lib.c	/^	uint32_t	stride;   \/* size of a scan line *\/$/;"	m	struct:m2d_buff	file:
+submit_sem	m2d_drv.c	/^	struct semaphore	submit_sem;$/;"	m	struct:m2d_device	typeref:struct:m2d_device::semaphore	file:
+switch_m2d_clk	m2d_drv.c	/^static int switch_m2d_clk(int enable)$/;"	f	file:
+task	m2d_drv.c	/^	struct task_struct	*task;$/;"	m	struct:m2d_context	typeref:struct:m2d_context::task_struct	file:
+total_gmem_size	m2d_drv.c	/^	unsigned long		total_gmem_size;$/;"	m	struct:m2d_context	file:
+total_gmem_size	m2d_drv.c	/^	unsigned long		total_gmem_size;$/;"	m	struct:m2d_device	file:
+trans_set	m2d_drv.c	/^	unsigned long		trans_set;$/;"	m	struct:m2d_context	file:
+unlikely	m2d_lib.c	56;"	d	file:
+unlikely	m2d_lib.c	59;"	d	file:
+unset_dvfm_constraint	m2d_drv.c	/^static void unset_dvfm_constraint(void) {}$/;"	f	file:
+unset_dvfm_constraint	m2d_drv.c	/^static void unset_dvfm_constraint(void)$/;"	f	file:
+use_srcbuf	gcu.h	/^	int use_srcbuf;$/;"	m	struct:gcu_info
+use_workaround	gcu.h	/^	int use_workaround;$/;"	m	struct:gcu_info
+v_frame	gcu.h	/^struct v_frame {$/;"	s
+wait_eeob	m2d_drv.c	/^	wait_queue_head_t	wait_eeob;$/;"	m	struct:m2d_device	file:
+width	gcu.h	/^    	int width;$/;"	m	struct:v_frame
+width	m2d_lib.c	/^	int		width;    \/* width & height of the rectangle *\/$/;"	m	struct:m2d_buff	file:
+width	m2d_lib.h	/^	int	width, height;$/;"	m	struct:m2d_op_region

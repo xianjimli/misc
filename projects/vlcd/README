@@ -1,0 +1,5 @@
+VNC server on android.
+It need vmouse and vkeykoard driver.
+TODO:
+	support clipboard
+	support file transfer.

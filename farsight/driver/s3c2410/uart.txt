@@ -1,0 +1,91 @@
+3个
+16BYTE FIFO
+UART Ch 0 and 1 with nRTS0, nCTS0, nRTS1, and nCTS1
+DMA mode or INT mode
+
+UART LINE CONTROL REGISTER
+UART CONTROL REGISTER
+UART CONTROL REGISTER (CONTINUED)
+Transmit Mode [3:2] Determine which function is currently able to write Tx data to the UART 00
+                    transmit buffer register.
+                    00 = Disable
+                    01 = Interrupt request or polling mode
+                    10 = DMA0 request (Only for UART0),
+                         DMA3 request (Only for UART2)
+                    11 = DMA1 request (Only for UART1)
+Receive Mode  [1:0] Determine which function is currently able to read data from UART       00
+                    receive buffer register.
+                    00 = Disable
+                    01 = Interrupt request or polling mode
+                    10 = DMA0 request (Only for UART0),
+                         DMA3 request (Only for UART2)
+                    11 = DMA1 request (Only for UART1)
+
+UART FIFO CONTROL REGISTER
+Tx FIFO Trigger Level [7:6] Determine the trigger level of transmit FIFO. 00
+                            00 = Empty                   01 = 4-byte
+                            10 = 8-byte                  11 = 12-byte
+Rx FIFO Trigger Level [5:4] Determine the trigger level of receive FIFO.  00
+                            00 = 4-byte                  01 = 8-byte
+                            10 = 12-byte                 11 = 16-byte
+Reserved               [3]                                                0
+Tx FIFO Reset          [2]  Auto-cleared after resetting FIFO             0
+                            0 = Normal                   1= Tx FIFO reset
+Rx FIFO Reset          [1]  Auto-cleared after resetting FIFO             0
+                            0 = Normal                   1= Rx FIFO reset
+FIFO Enable            [0]  0 = Disable                   1 = Enable      0
+
+UART MODEM CONTROL REGISTER
+UART TX/RX STATUS REGISTER
+UART ERROR STATUS REGISTER
+UART FIFO STATUS REGISTER
+Tx FIFO Full   [9]  Set to 1 automatically whenever transmit FIFO is full during 0
+                    transmit operation
+                    0 = 0-byte ≤ Tx FIFO data ≤ 15-byte
+                    1 = Full
+Rx FIFO Full   [8]  Set to 1 automatically whenever receive FIFO is full during  0
+                    receive operation
+                    0 = 0-byte ≤ Rx FIFO data ≤ 15-byte
+                    1 = Full
+Tx FIFO Count [7:4] Number of data in Tx FIFO                                    0
+Rx FIFO Count [3:0] Number of data in Rx FIFO
+
+UART MODEM STATUS REGISTER
+UART TRANSMIT BUFFER REGISTER (HOLDING REGISTER & FIFO REGISTER)
+UART RECEIVE BUFFER REGISTER (HOLDING REGISTER & FIFO REGISTER)
+
+UBRDIV [15:0] Baud rate division value
+UBRDIVn = (int)(PCLK / (bps x 16) ) - 1
+or
+UBRDIVn = (int)(UCLK / (bps x 16) ) - 1
+
+mach-smdk2410.c
+static struct s3c2410_uartcfg smdk2410_uartcfgs[] __initdata = {
+    [0] = {
+        .hwport      = 0,
+        .flags       = 0,
+        .ucon        = UCON,
+        .ulcon       = ULCON,
+        .ufcon       = UFCON,
+    },
+    [1] = {
+        .hwport      = 1,
+        .flags       = 0,
+        .ucon        = UCON,
+        .ulcon       = ULCON,
+        .ufcon       = UFCON,
+    },
+    [2] = {
+        .hwport      = 2,
+        .flags       = 0,
+        .ucon        = UCON,
+        .ulcon       = ULCON,
+        .ufcon       = UFCON,
+    }
+};
+
+s3c24xx_init_uarts
+s3c2410.c:s3c2410_init_uarts->s3c24xx_init_uartdevs
+
+serial/s3c2410.c
+serial/samsung.c

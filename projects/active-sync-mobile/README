@@ -1,0 +1,6 @@
+a RAPI/RRAC protocol implementation.
+
+TODO:
+0) Implement FindAllFiles/FindNext/FindClose
+1) test partner.
+2) endian

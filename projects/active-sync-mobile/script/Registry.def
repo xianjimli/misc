@@ -1,0 +1,8 @@
+0x31:Registry:Create_Key:RKEY key, WStr* sub_key, WStr* class_name,:RKEY* result, unsigned int* disposition
+0x2f:Registry:Open_Key:RKEY key, WStr* sub_key,:RKEY* result
+0x37:Registry:Query_Value:RKEY key, WStr* value_name, unsigned int data_length,:unsigned int* type, unsigned int* ret_data_length, void** ret_data
+0x32:Registry:Close_Key:RKEY key:
+0x33:Registry:Delete_Key:RKEY key, WStr* sub_key:
+0x35:Registry:Delete_Value:RKEY key, WStr* value_name:
+0x30:Registry:Enum_Key:RKEY key, unsigned int index, unsigned int name_length, unsigned int zero1, unsigned int zero2,:WStr** name
+0x38:Registry:Set_Value:RKEY key, WStr* value_name, unsigned int type, unsigned int data_length, void* data,:
